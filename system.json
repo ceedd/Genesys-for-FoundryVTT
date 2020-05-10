@@ -1,8 +1,8 @@
 {
   "name": "genesys",
   "title": "Genesys",
-  "description": "Trying to make a charachter sheet for Genesys based on the simple worldbuilding system made by Atropos.",
-  "version": 0.01,
+  "description": "Trying to make a charachtersheet for Genesys based on the simple worldbuilding system made by Atropos.",
+  "version": 0.1,
   "minimumCoreVersion": "0.5.2",
   "compatibleCoreVersion": "0.5.5",
   "templateVersion": 2,
@@ -16,7 +16,8 @@
   "primaryTokenAttribute": "wounds",
   "secondaryTokenAttribute": "stress",
   "url": "",
-  "manifest": "",
+  "manifest": "https://raw.githubusercontent.com/ceedd/Genesys-for-FoundryVTT/master/system.json",
+  "url":"https://github.com/ceedd/Genesys-for-FoundryVTT",
   "download": "",
   "license": "LICENSE.txt"
 }
