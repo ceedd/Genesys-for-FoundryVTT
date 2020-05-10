@@ -16,7 +16,7 @@
   "primaryTokenAttribute": "wounds",
   "secondaryTokenAttribute": "stress",
   "url": "",
-  "manifest": "https://raw.githubusercontent.com/ceedd/Genesys-for-FoundryVTT/master/system.json",
+  "manifest": "https://raw.githubusercontent.com/ceedd/Genesys-for-FoundryVTT/release-v0.1/system.json",
   "url":"https://github.com/ceedd/Genesys-for-FoundryVTT",
   "download": "https://github.com/ceedd/Genesys-for-FoundryVTT/archive/release-v0.1.zip",
   "license": "LICENSE.txt"
