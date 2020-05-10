@@ -18,6 +18,6 @@
   "url": "",
   "manifest": "https://raw.githubusercontent.com/ceedd/Genesys-for-FoundryVTT/master/system.json",
   "url":"https://github.com/ceedd/Genesys-for-FoundryVTT",
-  "download": "",
+  "download": "https://github.com/ceedd/Genesys-for-FoundryVTT/archive/release-v0.1.zip",
   "license": "LICENSE.txt"
 }
