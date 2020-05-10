@@ -9,6 +9,20 @@ background: #fffffff;
   padding: 5px;
   overflow-y: hidden;
 }
+.genesys input[type="number"] {
+    min-width: 20px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1px 3px;
+    margin: 0;
+    color: #191813;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    line-height: inherit;
+    border: 1px solid #7a7971;
+    border-radius: 3px;
+}
 
 /* Header */
 /*top*/
@@ -19,9 +33,18 @@ label{
 .genesys .sheet-header {
 	display: flex;
 	flex-direction: column;
+	height: 400px;
 }
 .genesys .sheet-header input {
 	height:100%;
+	text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
 .genesys .sheet-header .profile-img{
 	height: 150px;
@@ -118,6 +141,22 @@ label{
 	flex-direction:column;
 	padding: 5px;
 }
+
+.genesys .exp {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-evenly;
+}
+.genesys .exp input{
+	height: 40px;
+    width: 100px;
+}
+.genesys .exp .subExp{
+    display:flex;
+	flex-direction: column;
+    align-items: center;
+}
+
 /*tabs*/
 .genesys .tabs {
 	display: flex;

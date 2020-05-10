@@ -28,7 +28,7 @@
 					<label>Soak </label>
 
 					<div class="top">
-						<input type="text" name="data.soak.value" value="{{data.soak.value}}" data-dtype="Number"/>
+						<input type="number" name="data.soak.value" value="{{data.soak.value}}" min="0"data-dtype="Number"/>
 					</div>
 					<div class="bottom">
 					</br>
@@ -41,8 +41,8 @@
 				<label>Wounds </label>
 
 				<div class="top">
-					<input type="text" name="data.wounds.value" value="{{data.wounds.value}}" data-dtype="Number"/>
-					<input type="text" name="data.wounds.max" value="{{data.wounds.max}}" data-dtype="Number"/>
+					<input type="number" name="data.wounds.value" value="{{data.wounds.value}}" min="0"data-dtype="Number"/>
+					<input type="number" name="data.wounds.max" value="{{data.wounds.max}}" min="0"data-dtype="Number"/>
 				</div>
 
 				<div class="bottom">
@@ -58,8 +58,8 @@
 				<label>Strain </label>
 
 				<div class="top">
-					<input type="text" name="data.strain.value" value="{{data.strain.value}}" data-dtype="Number"/>
-					<input type="text" name="data.strain.max" value="{{data.strain.max}}" data-dtype="Number"/>
+					<input type="number" name="data.strain.value" value="{{data.strain.value}}" min="0"data-dtype="Number"/>
+					<input type="number" name="data.strain.max" value="{{data.strain.max}}" min="0"data-dtype="Number"/>
 				</div>
 
 				<div class="bottom">
@@ -74,8 +74,8 @@
 				<label> Defence</label>
 
 				<div class="top">
-					<input type="text" name="data.defence.ranged" value="{{data.defence.ranged}}" data-dtype="Number"/>
-					<input type="text" name="data.defence.melee" value="{{data.defence.melee}}" data-dtype="Number"/>
+					<input type="number" name="data.defence.ranged" value="{{data.defence.ranged}}" min="0"data-dtype="Number"/>
+					<input type="number" name="data.defence.melee" value="{{data.defence.melee}}" min="0"data-dtype="Number"/>
 
 				</div>
 
@@ -92,31 +92,42 @@
 
 	<div class="characteristics">
 		<div class="singleCharacteristics">
-			<input type="text" name="data.characteristics.brawn.value" value="{{data.characteristics.brawn.value}}" data-dtype="Number"/>
+			<input type="number" name="data.characteristics.brawn.value" value="{{data.characteristics.brawn.value}}" min="0"data-dtype="Number"/>
 			<p class="descriptor">Brawn</p>
 		</div>
 		<div class="singleCharacteristics">
-			<input type="text" name="data.characteristics.agility.value" value="{{data.characteristics.agility.value}}" data-dtype="Number"/>
+			<input type="number" name="data.characteristics.agility.value" value="{{data.characteristics.agility.value}}" min="0"data-dtype="Number"/>
 			<p class="descriptor">Agility</p>
 		</div>
 		<div class="singleCharacteristics">
-			<input type="text" name="data.characteristics.intellect.value" value="{{data.characteristics.intellect.value}}" data-dtype="Number"/>
+			<input type="number" name="data.characteristics.intellect.value" value="{{data.characteristics.intellect.value}}" min="0"data-dtype="Number"/>
 			<p class="descriptor">Intellect</p>
 		</div>
 		<div class="singleCharacteristics">
-			<input type="text" name="data.characteristics.cunning.value" value="{{data.characteristics.cunning.value}}" data-dtype="Number"/>
+			<input type="number" name="data.characteristics.cunning.value" value="{{data.characteristics.cunning.value}}" min="0"data-dtype="Number"/>
 			<p class="descriptor">Cunning</p>
 		</div>
 		<div class="singleCharacteristics">
-			<input type="text" name="data.characteristics.willpower.value" value="{{data.characteristics.willpower.value}}" data-dtype="Number"/>
+			<input type="number" name="data.characteristics.willpower.value" value="{{data.characteristics.willpower.value}}" min="0"data-dtype="Number"/>
 			<p class="descriptor">Willpower</p>
 		</div>
 		<div class="singleCharacteristics">
-			<input type="text" name="data.characteristics.presence.value" value="{{data.characteristics.presence.value}}" data-dtype="Number"/>
+			<input type="number" name="data.characteristics.presence.value" value="{{data.characteristics.presence.value}}" min="0" min="0"data-dtype="Number"/>
 			<p class="descriptor">Presence</p>
 		</div>
 	</div>
-</div>
+	<div class="exp">
+		<div class="subExp">
+			<input type="number" name="data.totalExperience" value="{{data.totalExperience}}" min="0"data-dtype="Number"/>
+			<p class="descriptor">Total Experience</p>
+		</div>
+		<div class="subExp">
+			<input type="number" name="data.experience" value="{{data.experience}}" min="0"data-dtype="Number"/>
+			<p class="descriptor">Current Experience</p>
+		</div>
+	
+	
+	</div>
 </header>
 {{!-- Sheet Tab Navigation --}}
 <nav class="sheet-tabs tabs" data-group="primary">
@@ -158,7 +169,7 @@
 					<input type="checkbox" class="CellCareer" name="data.skills.{{id}}.career" {{checked skill.career}} />
 				</td>
 				<td class="fourthCell">
-					<input name="data.skills.{{id}}.value" value="{{skill.value}}" type="range" min="0" max="5" data-dtype="Number" placeholder="0" />
+					<input name="data.skills.{{id}}.value" value="{{skill.value}}" type="range" min="0" max="5" min="0"data-dtype="Number" placeholder="0" />
 				</td>
 			</tr>
 			{{/each}}
@@ -174,7 +185,7 @@
 					<input type="checkbox" class="CellCareer" name="data.customSkils.{{cId}}.career" {{checked customSkil.career}} />
 				</td>
 				<td class="fourthCell">
-					<input name="data.customSkils.{{cId}}.value" value="{{customSkil.value}}" type="range" min="0" max="5" data-dtype="Number" placeholder="0" />
+					<input name="data.customSkils.{{cId}}.value" value="{{customSkil.value}}" type="range" min="0" max="5" min="0"data-dtype="Number" placeholder="0" />
 				</td>
 			</tr>
 			{{/each}} 
@@ -265,10 +276,10 @@
 							</div>
 							<div class="footer">
 								<div class="row">
-									<label>Total Ability Points</label> <input class="heroicInput" type="text" name="data.heroicAbility.totalAp" value="{{data.heroicAbility.totalAp}}" data-dtype="Number"> 
+									<label>Total Ability Points</label> <input class="heroicInput" type="text" name="data.heroicAbility.totalAp" value="{{data.heroicAbility.totalAp}}" min="0"data-dtype="Number"> 
 									</div>
 									<div class="row">
-										<label>Available Abilty Points</label> <input class="heroicInput" type="text" name="data.heroicAbility.availableAp" value="{{data.heroicAbility.availableAp}}" data-dtype="Number">
+										<label>Available Abilty Points</label> <input class="heroicInput" type="text" name="data.heroicAbility.availableAp" value="{{data.heroicAbility.availableAp}}" min="0"data-dtype="Number">
 										</div>
 									</div>
 								</div>
@@ -296,7 +307,7 @@
 							{{!-- Owned Items Tab --}}
 							<div class="tab items" data-group="primary" data-tab="items">
 
-							<label>Money</label> <input type="number" class="money" name="data.money" value="{{data.money}}" data-dtype="Number"> 
+							<label>Money</label> <input type="number" class="money" name="data.money" value="{{data.money}}" min="0"data-dtype="Number"> 
 									
 									
 											gear
