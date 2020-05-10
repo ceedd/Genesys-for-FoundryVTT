@@ -1,0 +1,223 @@
+
+
+.genesys .editable{
+height:100%;
+background: #fffffff;
+}
+.genesys .window-content {
+  height: 100%;
+  padding: 5px;
+  overflow-y: hidden;
+}
+
+/* Header */
+/*top*/
+label{
+	font-size: 110%;
+}
+
+.genesys .sheet-header {
+	display: flex;
+	flex-direction: column;
+}
+.genesys .sheet-header input {
+	height:100%;
+}
+.genesys .sheet-header .profile-img{
+	height: 150px;
+	width: 150px;
+	
+	border-radius: 10px;
+}
+.genesys .basicInfoBox{
+	display:flex;
+	flex-direction:row;
+	width: 100%;
+	
+	border-radius: 10px;
+}
+.genesys .header-fields{
+	display:flex;
+	flex-direction:row;
+	width: 100%;
+}
+.genesys .headerTop {
+	display: flex;
+    flex-direction: row;
+	width: 100%;
+}
+.genesys .rightBox{
+	display: flex;
+	flex-direction: column;
+	width:100%;
+}
+.genesys .leftBox{
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+    justify-content: center;
+}
+.genesys .basicInfo {
+    margin: 5px;
+	height: 25%;
+
+}
+.genesys .discriptor {
+    margin: 5px;
+	height: 25%;
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */    
+}
+/*bottom*/
+.genesys .resourceBox{
+	display: flex;
+    flex-direction: row;
+	justify-content: space-around;
+	
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.genesys .resoureceBox, .top, .bottom {
+		display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.genesys .resource input{
+	height: 40px;
+	width: 50px;
+	margin:5px;
+	font-size: 20px;
+}
+.genesys .resource{
+
+	display: flex;
+	justify-content: center;
+	flex-direction:column;
+	text-align:center;
+
+}
+/*characteristics*/
+.genesys .characteristics{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.genesys .characteristics input{
+	height: 40px;
+	width: 40px;
+	text-align:center;
+	
+}
+.genesys .singleCharacteristics {
+	display: flex;
+	align-items: center;
+	flex-direction:column;
+	padding: 5px;
+}
+/*tabs*/
+.genesys .tabs {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+	padding: 10px;
+	margin-top: 5px;
+	border-top: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+}
+.genesys .skillbody {
+
+	overflow: auto;
+	height: 100%;
+}
+.genesys .sheet-body {
+	height: calc(100% - 370px);
+	overflow: auto;
+}
+.genesys .sheet-body .skillbody tr{
+	height:30px;
+}
+.genesys .sheet-body .skillbody, .secondCell, .thirdCell {
+	height:20px;
+	text-align: center;
+	vertical-align: middle;
+}
+.genesys table {
+	height: 100%;
+}
+/*--Talent--*/
+.genesys .talentHeader {
+display:flex;
+flex-direction: row;
+margin-bottom:4px;
+}
+.genesys .talentBox {
+	display:flex;
+	flex-direction:column;
+	padding:5px;
+}
+.genesys .addTalent {
+	border: 1px solid #AAA;
+	background: rgba(0, 0, 0, 0.05);
+	text-align: center;
+}
+.genesys .talentHeader label{
+	margin-left:4px;
+	margin-right:4px;
+}
+/*Bio*/
+.genesys .charInfoSub {
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+}
+.genesys .charInfo {
+	display:flex;
+	flex-direction: row;
+	width: 100%;
+}
+.genesys .charInfo .row {
+	display:flex;
+	flex-direction: row;
+}
+.genesys .charInfo .row label{
+    width: 25%;
+	margin-left: 10px;
+}
+.genesys .bioBox {
+	display:flex;
+	flex-direction: column;
+}
+.genesys .bioBox .outerBox {
+	display:flex;
+	flex-direction: row;
+}
+.genesys .footer {
+	display: flex;
+    flex-direction: row;
+}.genesys .footer .row {
+	display: flex;
+    flex-direction: row;
+}
+.genesys .bioBox .row {
+	display:flex;
+	flex-direction: row;
+	padding: 5px;
+}
+.genesys .bioBox .row label{
+	width:120px;
+}
+.genesys .footer .heroicInput {
+width: 30px;
+}
+/*Notes */
+.genesys .editor, .genesys .editor-content{
+	height: 100%;
+}
+.genesys .tab{
+	height:100%
+}

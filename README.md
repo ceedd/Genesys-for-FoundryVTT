@@ -1,1 +1,3 @@
-# Genesys-for-FoundryVTT
+# Genesys for FoundryVTT
+
+An attempt at implementing Genesys Rpg

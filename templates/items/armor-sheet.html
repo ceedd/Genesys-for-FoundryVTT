@@ -1,0 +1,18 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
+
+        </div>
+    </header>
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+			<input name="data.armor.soak" type="text" value="{{data.armor.soak}}" placeholder="soak"/>
+			<input name="data.armor.defence" type="text" value="{{data.armor.defence}}" placeholder="defence"/>			
+			<input name="data.armor.rarity" type="text" value="{{data.armor.rarity}}" placeholder="rarity"/>
+			<input name="data.armor.price" type="text" value="{{data.armor.price}}" placeholder="price"/>
+			<input name="data.armor.encumbrance" type="text" value="{{data.armor.encumbrance}}" placeholder="encumbrance"/>
+        </div>
+    </section>
+</form>

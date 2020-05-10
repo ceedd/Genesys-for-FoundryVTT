@@ -1,0 +1,22 @@
+{
+  "name": "genesys",
+  "title": "Genesys",
+  "description": "Trying to make a charachter sheet for Genesys based on the simple worldbuilding system made by Atropos.",
+  "version": 0.01,
+  "minimumCoreVersion": "0.5.2",
+  "compatibleCoreVersion": "0.5.5",
+  "templateVersion": 2,
+  "author": "Ceedd Kerman",
+  "esmodules": ["module/simple.js"],
+  "styles": ["styles/simple.css","styles/items.css"],
+  "packs": [],
+  "languages": [],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "wounds",
+  "secondaryTokenAttribute": "stress",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt"
+}

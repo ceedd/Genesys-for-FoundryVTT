@@ -1,0 +1,576 @@
+{
+	"Actor": {
+		"types": [
+			"character"
+		],
+		"character": {
+			"injuries": {},
+			"notes": "",
+			"bioStrength": "",
+			"bioFlaw": "",
+			"bioDesire": "",
+			"bioFear": "",
+			"bioHeroic": "",
+			"experience": 0,
+			"totalExperience": 0,
+			"money": 0,
+			"basic": {
+				"charname": "",
+				"speciesArchtype": "",
+				"career": "",
+				"playername": ""
+			},
+			"stats": {
+				"wounds": {
+					"value": 0,
+					"min": 0,
+					"max": 10
+				},
+				"strain": {
+					"value": 0,
+					"min": 0,
+					"max": 5
+				},
+				"soak": {
+					"value": 0
+				},
+				"defence": {
+					"ranged": 0,
+					"melee": 0
+				}
+			},
+			"characteristics": {
+				"brawn": {
+					"value": 0,
+					"label": "Brawn",
+					"modifier": []
+				},
+				"agility": {
+					"value": 0,
+					"label": "Agility",
+					"modifier": []
+				},
+				"intellect": {
+					"value": 0,
+					"label": "Intellect",
+					"modifier": []
+				},
+				"cunning": {
+					"value": 0,
+					"label": "Cunning",
+					"modifier": []
+				},
+				"willpower": {
+					"value": 0,
+					"label": "Willpower",
+					"modifier": []
+				},
+				"presence": {
+					"value": 0,
+					"label": "Presence",
+					"modifier": []
+				}
+			},
+			"skills": {
+				"alchemy": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Alchemy",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"astrocartography": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Astrocartography",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"athletics": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Athletics",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "br"
+				},
+				"computers": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Computers",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"cool": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Cool",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "pr"
+				},
+				"discipline": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Discipline",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "will"
+				},
+				"driving": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Driving",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "ag"
+				},
+				"mechanics": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Mechanics",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"medicine": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Medicine",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"operating": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Operating",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"perception": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Perception",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"piloting": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Piloting",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "ag"
+				},
+				"resilience": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Resilience",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "br"
+				},
+				"riding": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Riding",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "ag"
+				},
+				"skulduggery": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Skulduggery",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "cun"
+				},
+				"stealh": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Stealth",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "ag"
+				},
+				"streetwise": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Streetwise",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "cun"
+				},
+				"survival": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Survival",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "cun"
+				},
+				"Vigilance": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Resilience",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "will"
+				},
+				"arcane": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Arcana",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"divine": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Divine",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "will"
+				},
+				"primal": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Primal",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "cun"
+				},
+				"brawl": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Brawl",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "br"
+				},
+				"gunnery": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Gunnery",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "ag"
+				},
+				"melee": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Melee",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "br"
+				},
+				"melee-heavy": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Melee-Heavy",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "br"
+				},
+				"melee-light": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Melee-light",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "br"
+				},
+				"ranged": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Ranged",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "ag"
+				},
+				"ranged-heavy": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Ranged-Heavy",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "ag"
+				},
+				"ranged-light": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Ranged-Light",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "ag"
+				},
+				"charm": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Charm",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "pr"
+				},
+				"coercion": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Coercion",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "will"
+				},
+				"deception": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Deception",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "cun"
+				},
+				"leadership": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Leadership",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "br"
+				},
+				"negotiation": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Negotiation",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "pr"
+				},
+				"Knowledge": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "Knowledge",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				}
+			},
+			"customSkils": {
+				"knowledge1": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "placeholder",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"knowledge2": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "placeholder",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"knowledge3": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "placeholder",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "int"
+				},
+				"custom1": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "placeholder",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": "´"
+				},
+				"custom2": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "placeholder",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": ""
+				},
+				"custom3": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "placeholder",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": ""
+				},
+				"custom4": {
+					"value": 0,
+					"min": 0,
+					"max": 5,
+					"label": "placeholder",
+					"setting": false,
+					"career": false,
+					"modifier": [],
+					"characteristic": ""
+				}
+			},
+			"description": {
+				"gender": "",
+				"age": "",
+				"height": "",
+				"hair": "",
+				"eyes": "",
+				"notable": ""
+			},
+			"heroicAbility": {
+				"name": "",
+				"origin": "",
+				"primaryEffect": "",
+				"upgrade": "",
+				"totalAp": 0,
+				"availableAp": 0
+			},
+			"talents": {}
+		}
+	},
+	"Item": {
+		"types": [
+			"armor",
+			"gear",
+			"injury",
+			"talent",
+			"weapon"
+		],
+		"weapon": {
+			"Name": "item",
+			"skill": 0,
+			"damage": 0,
+			"crit": 0,
+			"range": "",
+			"encumbrance": 0,
+			"price": 0,
+			"rarity": 0,
+			"special": 0,
+			"description": ""
+		},
+		"armor": {
+			"type": "",
+			"defence": 0,
+			"soak": 0,
+			"price": 0,
+			"rarity": 0,
+			"encumbrance": 0,
+			"description": ""
+		},
+		"gear": {
+			"type": "",
+			"price": 0,
+			"rarity": 0,
+			"encumbrance": 0,
+			"description": ""
+		},
+		"talent": {
+			"name": "",
+			"description": "",
+			"active": false,
+			"tier": 0,
+			"page": 0
+		},
+		"injury": {
+			"name": "",
+			"severity": 0,
+			"description": ""
+		}
+	}
+}
