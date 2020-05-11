@@ -6,10 +6,10 @@
 			<div class="header-fields">
 				<div class="basicInfoBox">
 					<div class="leftBox">
-						<div class="discriptor">Name</div>
-						<div class="discriptor">Species/Archtype</div>
-						<div class="discriptor">Career</div>
-						<div class="discriptor">Player</div>
+						<div class="discriptor">NAME</div>
+						<div class="discriptor">SPECIES/ARCHTYPE</div>
+						<div class="discriptor">CAREER</div>
+						<div class="discriptor">PLAYER</div>
 					</div>
 					<div class="rightBox">
 						<div class="basicInfo"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></div>
@@ -25,7 +25,7 @@
 
 				<div class="resource">
 
-					<label>Soak </label>
+					<div class="data"><label>SOAK</label></div>
 
 					<div class="top">
 						<input type="number" name="data.soak.value" value="{{data.soak.value}}" min="0"data-dtype="Number"/>
@@ -38,7 +38,7 @@
 
 
 			<div class="resource">
-				<label>Wounds </label>
+				<div class="data"><label>WOUNDS</label></div>
 
 				<div class="top">
 					<input type="number" name="data.wounds.value" value="{{data.wounds.value}}" min="0"data-dtype="Number"/>
@@ -46,8 +46,8 @@
 				</div>
 
 				<div class="bottom">
-					<label> Current</label>
-					<label> Treshold  </label>
+					<label>CURRENT</label>
+					<label>TRESHOLD</label>
 
 				</div>
 
@@ -55,7 +55,7 @@
 
 			</div>
 			<div class="resource">
-				<label>Strain </label>
+				<div class="data"><label>Strain </label></div>
 
 				<div class="top">
 					<input type="number" name="data.strain.value" value="{{data.strain.value}}" min="0"data-dtype="Number"/>
@@ -63,15 +63,15 @@
 				</div>
 
 				<div class="bottom">
-					<label>Current </label>
-					<label>Treshold </label>
+					<label>CURRENT</label>
+					<label>TRESHOLD</label>
 				</div>
 
 
 			</div>
 
 			<div class="resource">
-				<label> Defence</label>
+				<div class="data"><label>DEFENCE</label></div>
 
 				<div class="top">
 					<input type="number" name="data.defence.ranged" value="{{data.defence.ranged}}" min="0"data-dtype="Number"/>
@@ -80,8 +80,8 @@
 				</div>
 
 				<div class="bottom">
-					<label> Ranged </label>
-					<label> Melee </label>
+					<label>RANGED</label>
+					<label>MELEE</label>
 				</div>
 
 
@@ -93,50 +93,54 @@
 	<div class="characteristics">
 		<div class="singleCharacteristics">
 			<input type="number" name="data.characteristics.brawn.value" value="{{data.characteristics.brawn.value}}" min="0"data-dtype="Number"/>
-			<p class="descriptor">Brawn</p>
+			<p class="descriptor">BRAWN</p>
 		</div>
 		<div class="singleCharacteristics">
 			<input type="number" name="data.characteristics.agility.value" value="{{data.characteristics.agility.value}}" min="0"data-dtype="Number"/>
-			<p class="descriptor">Agility</p>
+			<p class="descriptor">AGILITY</p>
 		</div>
 		<div class="singleCharacteristics">
 			<input type="number" name="data.characteristics.intellect.value" value="{{data.characteristics.intellect.value}}" min="0"data-dtype="Number"/>
-			<p class="descriptor">Intellect</p>
+			<p class="descriptor">INTELLECT</p>
 		</div>
 		<div class="singleCharacteristics">
 			<input type="number" name="data.characteristics.cunning.value" value="{{data.characteristics.cunning.value}}" min="0"data-dtype="Number"/>
-			<p class="descriptor">Cunning</p>
+			<p class="descriptor">CUNNING</p>
 		</div>
 		<div class="singleCharacteristics">
 			<input type="number" name="data.characteristics.willpower.value" value="{{data.characteristics.willpower.value}}" min="0"data-dtype="Number"/>
-			<p class="descriptor">Willpower</p>
+			<p class="descriptor">WILLPOWER</p>
 		</div>
 		<div class="singleCharacteristics">
 			<input type="number" name="data.characteristics.presence.value" value="{{data.characteristics.presence.value}}" min="0" min="0"data-dtype="Number"/>
-			<p class="descriptor">Presence</p>
+			<p class="descriptor">PRESENCE</p>
 		</div>
 	</div>
 	<div class="exp">
 		<div class="subExp">
+
 			<input type="number" name="data.totalExperience" value="{{data.totalExperience}}" min="0"data-dtype="Number"/>
-			<p class="descriptor">Total Experience</p>
+			<div class="descriptor">
+				<p>TOTAL XP</p>
+			</div>
 		</div>
 		<div class="subExp">
 			<input type="number" name="data.experience" value="{{data.experience}}" min="0"data-dtype="Number"/>
-			<p class="descriptor">Current Experience</p>
+			<div class="descriptor">
+				<p>CURRENT XP</p>
+			</div>
 		</div>
-	
-	
+
 	</div>
 </header>
 {{!-- Sheet Tab Navigation --}}
 <nav class="sheet-tabs tabs" data-group="primary">
-	<a class="item" data-tab="skills">Skills</a>
-	<a class="item" data-tab="talents">Talents</a>
-	<a class="item" data-tab="biogragphy">Bio</a>
-	<a class="item" data-tab="injuries">Injuries</a>
-	<a class="item" data-tab="items">Equipment</a>
-	<a class="item" data-tab="note">Notes</a>
+	<a class="item" data-tab="skills">SKILLS</a>
+	<a class="item" data-tab="talents">TALENTS</a>
+	<a class="item" data-tab="biogragphy">BIO</a>
+	<a class="item" data-tab="injuries">INJURIES</a>
+	<a class="item" data-tab="items">EQUIPMENT</a>
+	<a class="item" data-tab="note">NOTES</a>
 </nav>
 {{!-- Sheet Body --}}
 <section class="sheet-body">
@@ -147,11 +151,11 @@
 
 		<table>
 
-			<tr>
-				<th class="firstCellUpper">Skill</th>
-				<th class="secondCell">Setting</th>
-				<th class="thirdCell">Career</th>
-				<th class="fourthCell"> Rank</th>
+			<tr class="skillTableHead">
+				<th class="firstCellUpper">SKILL</th>
+				<th class="secondCell">SETTING</th>
+				<th class="thirdCell">CAREER</th>
+				<th class="fourthCell">RANK</th>
 			</tr>
 
 
@@ -168,6 +172,9 @@
 				<td class="thirdCell">
 					<input type="checkbox" class="CellCareer" name="data.skills.{{id}}.career" {{checked skill.career}} />
 				</td>
+				<!--		<td>
+				placeholder for rollble button
+				</td>-->
 				<td class="fourthCell">
 					<input name="data.skills.{{id}}.value" value="{{skill.value}}" type="range" min="0" max="5" min="0"data-dtype="Number" placeholder="0" />
 				</td>
@@ -196,11 +203,15 @@
 		<ol class="items-list">
 			{{#each actor.talent as |item id|}}
 			<li class="item flexrow" data-item-id="{{item._id}}">
-				<img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-				<h4 class="item-name">{{item.name}}</h4>
-				<div class="item-controls">
-					<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-					<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+				<div class="listBox">
+
+					<img src="{{item.img}}" title="{{item.name}}" />
+
+					<h4 class="item-name">{{item.name}}</h4>
+					<div class="item-controls">
+						<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+						<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+					</div>
 				</div>
 			</li>
 			{{/each}}
@@ -262,74 +273,77 @@
 					<textarea class="fear" rows="4" cols="50" name="data.bioFear" >{{data.bioDesire}}</textarea>
 				</div>
 			</div>
-			<div class="row">
-				<label>Name</label> <input class="heroicInput" type="text" name="data.heroicAbility.name" value="{{data.heroicAbility.name}}" data-dtype="Text">
-				</div>
+			<div class="heroicBox">
 				<div class="row">
-					<label>Origin</label> <input class="heroicInput" type="text" name="data.heroicAbility.origin" value="{{data.heroicAbility.origin}}" data-dtype="Text"> 
+					<label>Name</label> <input class="heroicInput" type="text" name="data.heroicAbility.name" value="{{data.heroicAbility.name}}" data-dtype="Text">
 					</div>
 					<div class="row">
-						<label>Primary Effect</label> <input class="heroicInput" type="text" name="data.heroicAbility.primaryEffect" value="{{data.heroicAbility.primaryEffect}}" data-dtype="Text"> 
+						<label>Origin</label> <input class="heroicInput" type="text" name="data.heroicAbility.origin" value="{{data.heroicAbility.origin}}" data-dtype="Text"> 
 						</div>
 						<div class="row">
-							<label>Upgrade</label> <input class="heroicInput" type="text" name="data.heroicAbility.upgrade" value="{{data.heroicAbility.upgrade}}" data-dtype="Text"> 
+							<label>Primary Effect</label> <input class="heroicInput" type="text" name="data.heroicAbility.primaryEffect" value="{{data.heroicAbility.primaryEffect}}" data-dtype="Text"> 
 							</div>
-							<div class="footer">
-								<div class="row">
-									<label>Total Ability Points</label> <input class="heroicInput" type="text" name="data.heroicAbility.totalAp" value="{{data.heroicAbility.totalAp}}" min="0"data-dtype="Number"> 
-									</div>
+							<div class="row">
+								<label>Upgrade</label> <input class="heroicInput" type="text" name="data.heroicAbility.upgrade" value="{{data.heroicAbility.upgrade}}" data-dtype="Text"> 
+								</div>
+								<div class="footer">
 									<div class="row">
-										<label>Available Abilty Points</label> <input class="heroicInput" type="text" name="data.heroicAbility.availableAp" value="{{data.heroicAbility.availableAp}}" min="0"data-dtype="Number">
+										<label>Total Ability Points</label> <input class="heroicInput" type="text" name="data.heroicAbility.totalAp" value="{{data.heroicAbility.totalAp}}" min="0" data-dtype="Number"> 
+										</div>
+										<div class="row">
+											<label>Available Abilty Points</label> <input class="heroicInput" type="text" name="data.heroicAbility.availableAp" value="{{data.heroicAbility.availableAp}}" min="0"data-dtype="Number">
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							{{!-- Injuries Tab --}}	
-							<div class="tab injuries" data-group="primary" data-tab="injuries">
+								</div>
+								
+								{{!-- Injuries Tab --}}	
+								<div class="tab injuries" data-group="primary" data-tab="injuries">
 
-								<ol class="items-list">
-									{{#each actor.injury as |item id|}}
-									test
-									<li class="item flexrow" data-item-id="{{item._id}}">
-										<img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-										<h4 class="item-name">{{item.name}}</h4>
-										<div class="item-controls">
-											<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-											<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-										</div>
-									</li>
+									<ol class="items-list">
+										{{#each actor.injury as |item id|}}
+										<li class="item flexrow" data-item-id="{{item._id}}">
+											<div class="listBox">
 
-									{{/each}}
-								</ol>
+												<img src="{{item.img}}" title="{{item.name}}" />
 
-							</div>
+												<h4 class="item-name">{{item.name}}</h4>
+												<div class="item-controls">
+													<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+													<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+												</div>
+											</div>
+										</li>
+										{{/each}}
+									</ol>
 
-							{{!-- Owned Items Tab --}}
-							<div class="tab items" data-group="primary" data-tab="items">
+								</div>
 
-							<label>Money</label> <input type="number" class="money" name="data.money" value="{{data.money}}" min="0"data-dtype="Number"> 
-									
-									
-											gear
-											<ol class="items-list">
-												{{#each actor.gear as |item id|}}
-												<li class="item flexrow" data-item-id="{{item._id}}">
-													<img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-													<h4 class="item-name">{{item.name}}</h4>
+								{{!-- Owned Items Tab --}}
+								<div class="tab items" data-group="primary" data-tab="items">
+
+									<div class="itemHeader"> <p name="Money">MONEY	   </p> <input type="number" class="money" name="data.money" value="{{data.money}}" min="0"data-dtype="Number"></div> 
+
+										<ol class="items-list">
+											{{#each actor.gear as |item id|}}
+											<li class="item flexrow" data-item-id="{{item._id}}">
+												<div class="listBox">
+													<img src="{{item.img}}" title="{{item.name}}" />
+													<p class="item-name">{{item.name}}</p>
 													<div class="item-controls">
 														<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
 														<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
 													</div>
-												</li>
-												{{/each}}
-											</ol>
-										
-									
-								</div>
-								{{!-- Notes Tab --}}
-								<div class="tab notes" data-group="primary" data-tab="note">
-									{{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
-								</div>
-							</section>
-						</form>
-						
+												</div>
+											</li>
+											{{/each}}
+										</ol>
+									</div>
+									{{!-- Notes Tab --}}
+									<div class="tab notes" data-group="primary" data-tab="note">
+										{{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
+									</div>
+								</section>
+							</form>
+							
