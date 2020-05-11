@@ -1,18 +1,31 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
-        <div class="header-fields">
-            <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
-        </div>
-    </header>
+	<header class="item-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+		<div class="header-fields">
+			<input class="title" name="name" type="text" value="{{item.name}}" placeholder="Name"/>
 
+		</div>
+	</header>
+	{{!-- Sheet Body --}}
+	<section class="item-body">
+	<div class="itemBox">
+			<div class="row">
+				<label>ACTIVE</label>
+				<input name="data.talent.active" type="checkbox" value="{{data.talent.active}}" {{checked data.talent.active}}/>
+			</div>
+			<div class="row">
+				<label>TIER</label>
+				<input name="data.talent.tier" type="number" value="{{data.talent.tier}}" placeholder="tier" min="0" data-dtype="Number"/>
+			</div>
+			<div class="row">
+				<label>PAGE</label>
+				<input name="data.talent.page" type="number" value="{{data.talent.page}}" placeholder="page" min="0" data-dtype="Number"/>
+			</div>
+				<div class="box">
+					<label>DESCRIPTION</label>
+					<textarea class="desc" rows="4" cols="50" name="data.talent.description" >{{data.talent.description}}</textarea>
+				</div>
+		</div>
 
-
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
-
-       <input name="item.talent.active" type="checkbox" value="{{item.talent.active}}" placeholder="Name"/>
-	   <input name="item.talent.tier" type="text" value="{{item.talent.tier}}" placeholder="Name"/>
-	   <input name="item.talent.page" type="text" value="{{item.talent.page}}" placeholder="Name"/>
-    </section>
+	</section>
 </form>

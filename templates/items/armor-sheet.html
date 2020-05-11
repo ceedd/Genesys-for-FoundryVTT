@@ -1,18 +1,40 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
-        <div class="header-fields">
-            <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
+	<header class="item-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+		<div class="header-fields">
+			<input class="title" name="name" type="text" value="{{item.name}}" placeholder="Name"/>
 
-        </div>
-    </header>
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
-			<input name="data.armor.soak" type="text" value="{{data.armor.soak}}" placeholder="soak"/>
-			<input name="data.armor.defence" type="text" value="{{data.armor.defence}}" placeholder="defence"/>			
-			<input name="data.armor.rarity" type="text" value="{{data.armor.rarity}}" placeholder="rarity"/>
-			<input name="data.armor.price" type="text" value="{{data.armor.price}}" placeholder="price"/>
-			<input name="data.armor.encumbrance" type="text" value="{{data.armor.encumbrance}}" placeholder="encumbrance"/>
-        </div>
-    </section>
+		</div>
+	</header>
+	{{!-- Sheet Body --}}
+	<section class="item-body">
+
+		<div class="itemBox">
+			<div class="row">
+				<label>SOAK</label>
+				<input name="data.armor.soak" type="number" value="{{data.armor.soak}}" placeholder="soak" min="0" data-dtype="Number"/>
+			</div>
+			<div class="row">
+				<label>DEFENCE</label>
+				<input name="data.armor.defence" type="number" value="{{data.armor.defence}}" placeholder="defence "min="0" data-dtype="Number"/>	
+			</div>
+			<div class="row">
+				<label>RARITY</label>
+				<input name="data.armor.rarity" type="number" value="{{data.armor.rarity}}" placeholder="rarity" min="0" data-dtype="Number"/>
+			</div>
+			<div class="row">
+				<label>PRICE</label>
+				<input name="data.armor.price" type="number" value="{{data.armor.price}}" placeholder="price" min="0" data-dtype="Number"/>
+			</div>
+			<div class="row">
+				<label>ENCUMBRANCE</label>
+				<input name="data.armor.encumbrance" type="number" value="{{data.armor.encumbrance}}" placeholder="encumbrance" min="0" data-dtype="Number"/>
+			</div>
+				<div class="box">
+					<label>DESCRIPTION</label>
+					<textarea class="desc" rows="4" cols="50" name="data.armor.description" >{{data.armor.description}}</textarea>
+				</div>
+		</div>
+
+	</section>
 </form>

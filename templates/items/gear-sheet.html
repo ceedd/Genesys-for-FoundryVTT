@@ -1,18 +1,32 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
-        <div class="header-fields">
-            <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
+	<header class="item-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+		<div class="header-fields">
+			<input class="title" name="name" type="text" value="{{item.name}}" placeholder="Name"/>
 
-        </div>
-    </header>
-    <section class="sheet-body">
+		</div>
+	</header>
+	{{!-- Sheet Body --}}
+	<section class="item-body">
 
+		<div class="itemBox">
+			<div class="row">
+				<label>RARITY</label>
+				<input name="data.gear.rarity" type="number" value="{{data.gear.rarity}}" placeholder="rarity" min="0" data-dtype="Number"/>
+			</div>
+			<div class="row">
+				<label>PRICE</label>
+				<input name="data.gear.price" type="number" value="{{data.gear.price}}" placeholder="price" min="0" data-dtype="Number"/>
+			</div>
+			<div class="row">
+				<label>ENCUMBRANCE</label>
+				<input name="data.gear.encumbrance" type="number" value="{{data.gear.encumbrance}}" placeholder="encumbrance" min="0" data-dtype="Number"/>
+			</div>
+				<div class="box">
+					<label>DESCRIPTION</label>
+					<textarea class="desc" rows="4" cols="50" name="data.gear.description" >{{data.gear.description}}</textarea>
+				</div>
+		</div>
 
-			<input name="data.gear.rarity" type="text" value="{{data.gear.rarity}}" placeholder="rarity"/>
-			<input name="data.gear.price" type="text" value="{{data.gear.price}}" placeholder="price"/>
-			<input name="data.gear.encumbrance" type="text" value="{{data.gear.encumbrance}}" placeholder="encumbrance"/>
-        </div>
-    </section>
+	</section>
 </form>
-
