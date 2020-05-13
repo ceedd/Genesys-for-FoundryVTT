@@ -1,16 +1,24 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
-        <div class="header-fields">
-            <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
+	<header class="item-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+		<div class="header-fields">
+			<input class="title" name="name" type="text" value="{{item.name}}" placeholder="Name"/>
 
-        </div>
-    </header>
+		</div>
+	</header>
+	{{!-- Sheet Body --}}
+	<section class="item-body">
 
+		<div class="itemBox">
+			<div class="row">
+				<label>SEVERITY</label>
+				<input name="data.injury.severity" type="number" value="{{data.injury.severity}}" placeholder="severity" min="0" data-dtype="Number"/>
+			</div>
+				<div class="box">
+					<label>DESCRIPTION</label>
+					<textarea class="desc" rows="4" cols="50" name="data.injury.description" >{{data.injury.description}}</textarea>
+				</div>
+		</div>
 
-    <section class="sheet-body">
-			<input name="data.injury.severity" type="number" value="{{data.injury.severity}}" placeholder="rarity"/>
-			<input name="data.injury.description" type="text" value="{{data.injury.description}}" placeholder="rarity"/>
-    </section>
+	</section>
 </form>
-

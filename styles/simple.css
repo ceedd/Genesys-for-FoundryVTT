@@ -5,150 +5,246 @@ height:100%;
 background: #fffffff;
 }
 .genesys .window-content {
-  height: 100%;
-  padding: 5px;
-  overflow-y: hidden;
-}
+height: 100%;
+padding: 5px;
+overflow-y: hidden;
+background: #f7f5ef;
 
+}
+.genesys input[type="number"] {
+min-width: 20px;
+height: 24px;
+background: rgba(0, 0, 0, 0.05);
+padding: 1px 3px;
+margin: 0;
+color: #191813;
+font-family: inherit;
+font-size: inherit;
+text-align: inherit;
+line-height: inherit;
+border: 1px solid #7a7971;
+border-radius: 3px;
+}
 /* Header */
 /*top*/
 label{
-	font-size: 110%;
+font-size: 110%;
 }
 
 .genesys .sheet-header {
-	display: flex;
-	flex-direction: column;
+display: flex;
+flex-direction: column;
+height: 430px;
+gap: 5px;
 }
 .genesys .sheet-header input {
-	height:100%;
+height:100%;
+text-align: center;
+background:#fffffe;
 }
-.genesys .sheet-header .profile-img{
-	height: 150px;
-	width: 150px;
-	
-	border-radius: 10px;
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+margin: 0; 
+}
+.genesys .profile-img{
+height: 150px !important;
+width: 150px;
+
+border-radius: 10px;
 }
 .genesys .basicInfoBox{
-	display:flex;
-	flex-direction:row;
-	width: 100%;
-	
-	border-radius: 10px;
+display:flex;
+flex-direction:row;
+width: 100%;
+background: #eff1ed;
+border-radius: 10px;
 }
 .genesys .header-fields{
-	display:flex;
-	flex-direction:row;
-	width: 100%;
+display:flex;
+flex-direction:row;
+width: 100%;
+
 }
 .genesys .headerTop {
-	display: flex;
-    flex-direction: row;
-	width: 100%;
+display: flex;
+flex-direction: row;
+width: 100%;
 }
 .genesys .rightBox{
-	display: flex;
-	flex-direction: column;
-	width:100%;
+display: flex;
+flex-direction: column;
+width:100%;
 }
 .genesys .leftBox{
-	display: flex;
-	flex-direction: column;
-	width: 200px;
-    justify-content: center;
+display: flex;
+flex-direction: column;
+width: 200px;
+justify-content: center;
 }
 .genesys .basicInfo {
-    margin: 5px;
-	height: 25%;
+margin: 5px;
+height: 25%;
 
 }
 .genesys .discriptor {
-    margin: 5px;
-	height: 25%;
-	display: flex;
-	justify-content: center; /* align horizontal */
-	align-items: center; /* align vertical */    
+margin: 5px;
+height: 25%;
+display: flex;
+justify-content: center; /* align horizontal */
+align-items: center; /* align vertical */    
 }
 /*bottom*/
 .genesys .resourceBox{
-	display: flex;
-    flex-direction: row;
-	justify-content: space-around;
-	
-    border-radius: 10px;
-    margin-top: 5px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+border-radius: 10px;
+margin-top: 5px;
 }
 .genesys .resoureceBox, .top, .bottom {
-		display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
 }
 .genesys .resource input{
-	height: 40px;
-	width: 50px;
-	margin:5px;
-	font-size: 20px;
+height: 40px;
+width: 50px;
+margin:5px;
+font-size: 20px;
 }
 .genesys .resource{
 
-	display: flex;
-	justify-content: center;
-	flex-direction:column;
-	text-align:center;
-
+display: flex;
+justify-content: center;
+flex-direction:column;
+text-align:center;
+width: 150px;
+background: #3a4664;
+border-radius: 10px;
+}
+.genesys .resource .data{
+background: #8b362c;
+border-radius: 10px 10px 0px 0px;
+}
+.genesys .resourceBox {
+color:#fffefd;
 }
 /*characteristics*/
 .genesys .characteristics{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	
-    border-radius: 10px;
-    margin-top: 5px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+background: #f7a452;
+border-radius: 10px;
+margin-top: 5px;
 }
 .genesys .characteristics input{
-	height: 40px;
-	width: 40px;
-	text-align:center;
-	
+height: 40px;
+width: 40px;
+text-align:center;
+
 }
 .genesys .singleCharacteristics {
-	display: flex;
-	align-items: center;
-	flex-direction:column;
-	padding: 5px;
+display: flex;
+align-items: center;
+flex-direction:column;
+margin: 5px;
+background: #3a4664;
+background:
+linear-gradient(150deg, transparent 25px, #3a4664 0) top left,
+linear-gradient(210deg, transparent 25px, #3a4664 0) top right,
+linear-gradient(315deg, transparent 0px, #3a4664 0) bottom right,
+linear-gradient(45deg, transparent 0px, #3a4664 0) bottom left;
+background-size: 50% 60%;
+background-repeat: no-repeat;
+width: 80px;
+color: #fffefd;
+height: fit-content;
+}
+
+.genesys .exp {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+}
+.genesys .exp input{
+height: 40px;
+width: 100px;
+}
+.genesys .exp .subExp{
+display:flex;
+flex-direction: column;
+align-items: center;
+}
+.genesys .exp .subExp input{
+background: #d8ecf7;
+}
+.genesys .exp .subExp .descriptor{
+width:100%;
+background:#8b362c;
+color: #fffefd;
+height: fit-content;
+border-radius:0px 0px 15px 15px;
+display: flex;
+justify-content: center;
 }
 /*tabs*/
 .genesys .tabs {
-	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-	padding: 10px;
-	margin-top: 5px;
-	border-top: 1px solid #AAA;
-	border-bottom: 1px solid #AAA;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-start;
+padding: 10px;
+margin-top: 5px;
+border-top: 1px solid #AAA;
+border-bottom: 1px solid #AAA;
+}.genesys .tabs .item{
+-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0 50%);
+background: #41434b;
+color: #fffefd;
+
 }
 .genesys .skillbody {
 
-	overflow: auto;
-	height: 100%;
+overflow: auto;
+height: 100%;
 }
 .genesys .sheet-body {
-	height: calc(100% - 370px);
-	overflow: auto;
+height: calc(100% - 465px);
+overflow: auto;
 }
 .genesys .sheet-body .skillbody tr{
-	height:30px;
+height:35px;
 }
 .genesys .sheet-body .skillbody, .secondCell, .thirdCell {
-	height:20px;
-	text-align: center;
-	vertical-align: middle;
+height:20px;
+text-align: center;
+vertical-align: middle;
 }
 .genesys table {
-	height: 100%;
+height: 100%;
 }
+.genesys tbody{
+background: #d8ecf7;
+}
+.genesys .skillTableHead {
+color:#464646;
+}
+.genesys .firstCell{
+text-transform: uppercase;
+}
+/*.genesys .fourthCell{
+background: url("../resources/bar.svg");
+background-repeat:no-repeat;
+background-position: center;
+background-size: cover;
+}
+*/
 /*--Talent--*/
 .genesys .talentHeader {
 display:flex;
@@ -156,68 +252,182 @@ flex-direction: row;
 margin-bottom:4px;
 }
 .genesys .talentBox {
-	display:flex;
-	flex-direction:column;
-	padding:5px;
+display:flex;
+flex-direction:column;
+padding:5px;
 }
 .genesys .addTalent {
-	border: 1px solid #AAA;
-	background: rgba(0, 0, 0, 0.05);
-	text-align: center;
+border: 1px solid #AAA;
+background: rgba(0, 0, 0, 0.05);
+text-align: center;
 }
 .genesys .talentHeader label{
-	margin-left:4px;
-	margin-right:4px;
+margin-left:4px;
+margin-right:4px;
 }
 /*Bio*/
 .genesys .charInfoSub {
-	display:flex;
-	flex-direction: column;
-	width: 100%;
+display:flex;
+flex-direction: column;
+width: 100%;
+background: #d8ecf7;
+border-radius: 10px;
+margin: 4px;
+}
+.genesys .charInfoSub input,
+.genesys .bioBox input,
+.genesys .bioBox textarea {
+background: #fffffe;
 }
 .genesys .charInfo {
-	display:flex;
-	flex-direction: row;
-	width: 100%;
+display:flex;
+flex-direction: row;
+width: 100%;
 }
 .genesys .charInfo .row {
-	display:flex;
-	flex-direction: row;
+display:flex;
+flex-direction: row;
 }
 .genesys .charInfo .row label{
-    width: 25%;
-	margin-left: 10px;
+width: 25%;
+margin-left: 10px;
 }
 .genesys .bioBox {
-	display:flex;
-	flex-direction: column;
+display:flex;
+flex-direction: column;
 }
 .genesys .bioBox .outerBox {
-	display:flex;
-	flex-direction: row;
+display:flex;
+flex-direction: row;
+background:#d8ecf7;
+border-radius:10px;
+margin: 5px 2px 5px 2px;
+}
+.genesys .bioBox .outerBox .box {
+	width:49%;
+	margin: 5px 2px 5px 2px;
+}
+.genesys .bioBox .outerBox .box textarea{
+	resize:none;
+}
+.genesys .bioBox .heroicBox{
+	background:#d8ecf7;
+	border-radius:10px;
 }
 .genesys .footer {
-	display: flex;
-    flex-direction: row;
+display: flex;
+flex-direction: row;
+justify-content: center;
 }.genesys .footer .row {
-	display: flex;
-    flex-direction: row;
+display: flex;
+flex-direction: row;
+}
+.genesys .bioBox .footer .row label {
+    width: 100%;
+}
+.genesys .bioBox .footer .row input {
+ text-align:center;
 }
 .genesys .bioBox .row {
-	display:flex;
-	flex-direction: row;
-	padding: 5px;
+display:flex;
+flex-direction: row;
+padding: 5px;
 }
 .genesys .bioBox .row label{
-	width:120px;
+width:120px;
 }
 .genesys .footer .heroicInput {
 width: 30px;
 }
 /*Notes */
 .genesys .editor, .genesys .editor-content{
-	height: 100%;
+height: 100%;
 }
 .genesys .tab{
-	height:100%
+height:100%
+}
+
+.genesys .items-list img{
+	height:50px;
+	width:50px;
+}
+.genesys .money {
+	font-size:large;	
+}
+.genesys .itemHeader{
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items:center;
+	background:#d8ecf7;
+	margin-top:5px;
+	border-radius:5px;
+}
+.genesys .itemHeader p{
+margin-right:5px;
+}
+.genesys .items-list .listBox{
+	display: flex;
+	flex-direction:row;
+	margin: 5px 0px 5px 0px;
+	background: #d8ecf7;
+    border-radius: 5px;
+    align-items: center;
+    border: 2px solid #3a4664;
+	height: 52px;
+}
+.genesys .items-list .item-name{
+	width: 72px;
+    margin-left: 10px;
+    font-size: large;
+}
+
+/* item sheets */
+
+.genesys .item-header {
+display:flex;
+align-items: center;
+justify-content: center;
+margin-bottom:5px;
+}
+.genesys .item-header .title{
+width: 80%;
+height: 50px;
+}
+.genesys .item-header .header-fields{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+    height: 100px;
+    width: 80%;
+    background: #d8ecf7;
+	margin: 6px;
+	border-radius:5px;	
+}
+.genesys .itemBox {
+display:flex;
+flex-direction:column;
+background: #d8ecf7;
+border-radius: 5px;
+}
+.genesys .item-body .row {
+display:flex;
+flex-direction:row;
+margin: 3px 0px 3px 0px;
+}
+.genesys .item-body label {
+width: 30%;
+margin-left:5px
+}
+.genesys .item-body textarea {
+resize:none;
+margin: 5px 0px 5px 5px;
+width: 90%;
+
+}
+.genesys .item-body input {
+resize:none;
+margin: 5px 0px 5px 5px;
+width: 50%;
+
 }

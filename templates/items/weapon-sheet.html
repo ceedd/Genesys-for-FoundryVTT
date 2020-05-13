@@ -1,59 +1,52 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
-        <div class="header-fields">
-            <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
-			<input name="Item.item.rarity" type="text" value="{{Item.item.rarity}}" placeholder="rarity"/>
-			<input name="item.price" type="text" value="{{Item.item.price}}" placeholder="price"/>
-			<input name="item.encumbrance" type="text" value="{{Item.item.encumbrance}}" placeholder="encumbrance"/>
-        </div>
-    </header>
+	<header class="item-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+		<div class="header-fields">
+			<input class="title" name="name" type="text" value="{{item.name}}" placeholder="Name"/>
 
-    {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="attributes">Attributes</a>
-    </nav>
+		</div>
+	</header>
+	{{!-- Sheet Body --}}
+	<section class="item-body">
 
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
+		<div class="itemBox">
+			<div class="row">
+				<label>SKILL</label>
+				<input name="data.weapon.skill" type="text" value="{{data.weapon.skill}}" placeholder="skill" min="0" data-dtype="String"/>
+			</div>
+			<div class="row">
+				<label>DAMAGE</label>
+				<input name="data.weapon.damage" type="number" value="{{data.weapon.damage}}" placeholder="damage "min="0" data-dtype="Number"/>	
+			</div>
+			<div class="row">
+				<label>CRIT</label>
+				<input name="data.weapon.crit" type="number" value="{{data.weapon.crit}}" placeholder="crit" min="0" data-dtype="Number"/>
+			</div>
+			<div class="row">
+				<label>RANGE</label>
+				<input name="data.weapon.range" type="text" value="{{data.weapon.range}}" placeholder="range" min="0" data-dtype="String"/>
+			</div>
+			<div class="row">
+				<label>PRICE</label>
+				<input name="data.weapon.price" type="number" value="{{data.weapon.price}}" placeholder="price" min="0" data-dtype="Number"/>
+			</div>
+			<div class="row">
+				<label>RARITY</label>
+				<input name="data.weapon.rarity" type="number" value="{{data.weapon.rarity}}" placeholder="rarity" min="0" data-dtype="Number"/>
+			</div>
+			<div class="row">
+				<label>SPECIAL</label>
+				<input name="data.weapon.special" type="text" value="{{data.weapon.special}}" placeholder="special" min="0" data-dtype="String"/>
+			</div>
+			<div class="row">
+				<label>ENCUMBRANCE</label>
+				<input name="data.weapon.encumbrance" type="number" value="{{data.weapon.encumbrance}}" placeholder="encumbrance" min="0" data-dtype="Number"/>
+			</div>
+				<div class="box">
+					<label>DESCRIPTION</label>
+					<textarea class="desc" rows="4" cols="50" name="data.weapon.description" >{{data.weapon.description}}</textarea>
+				</div>
+		</div>
 
-        {{!-- Description Tab --}}
-        <div class="tab" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-        </div>
-
-        {{!-- Attributes Tab --}}
-        <div class="tab attributes" data-group="primary" data-tab="attributes">
-            <header class="attributes-header flexrow">
-                <span class="attribute-key">Attribute Key</span>
-                <span class="attribute-value">Value</span>
-                <span class="attribute-label">Label</span>
-                <span class="attribute-dtype">Data Type</span>
-                <a class="attribute-control" data-action="create"><i class="fas fa-plus"></i></a>
-            </header>
-
-            <ol class="attributes-list">
-            {{#each data.attributes as |attr key|}}
-                <li class="attribute flexrow" data-attribute="{{key}}">
-                    <input class="attribute-key" type="text" name="data.attributes.{{key}}.key" value="{{key}}"/>
-                    {{#if attr.isCheckbox}}
-                    <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.{{key}}.value" {{checked attr.value}}/></label>
-                    {{else}}
-                    <input class="attribute-value" type="text" name="data.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="{{attr.dtype}}"/>
-                    {{/if}}
-                    <input class="attribute-label" type="text" name="data.attributes.{{key}}.label" value="{{attr.label}}"/>
-                    <select class="attribute-dtype" name="data.attributes.{{key}}.dtype">
-                        {{#select attr.dtype}}
-                        {{#each ../dtypes as |t|}}
-                        <option value="{{t}}">{{t}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                    <a class="attribute-control" data-action="delete"><i class="fas fa-trash"></i></a>
-                </li>
-            {{/each}}
-            </ol>
-        </div>
-    </section>
+	</section>
 </form>
