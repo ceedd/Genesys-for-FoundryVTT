@@ -8,7 +8,7 @@ export class SimpleActorSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["genesys", "sheet", "actor"],
-            template: "systems/Genesys/templates/actor-sheet.html",
+            template: "systems/genesys/templates/actor-sheet.html",
             width: 620,
             height: 800,
             tabs: [{ navSelector: ".sheet-tabs",contentSelector: ".sheet-body", initial: "description"  }]
