@@ -80,6 +80,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"astrocartography": {
@@ -90,6 +91,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"athletics": {
@@ -100,6 +102,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"brawn",
 					"characteristic": "br"
 				},
 				"computers": {
@@ -110,6 +113,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"cool": {
@@ -120,6 +124,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"presence",
 					"characteristic": "pr"
 				},
 				"discipline": {
@@ -130,6 +135,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"willpower",
 					"characteristic": "will"
 				},
 				"driving": {
@@ -150,6 +156,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"medicine": {
@@ -160,6 +167,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"operating": {
@@ -170,6 +178,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"perception": {
@@ -180,6 +189,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"piloting": {
@@ -200,6 +210,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"brawn",
 					"characteristic": "br"
 				},
 				"riding": {
@@ -220,6 +231,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"cunning",
 					"characteristic": "cun"
 				},
 				"stealh": {
@@ -240,6 +252,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"cunning",
 					"characteristic": "cun"
 				},
 				"survival": {
@@ -250,16 +263,18 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"cunning",
 					"characteristic": "cun"
 				},
-				"Vigilance": {
+				"vigilance": {
 					"value": 0,
 					"min": 0,
 					"max": 5,
-					"label": "Resilience",
+					"label": "Vigilance",
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"willpower",
 					"characteristic": "will"
 				},
 				"arcane": {
@@ -270,6 +285,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"divine": {
@@ -280,6 +296,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"willpower",
 					"characteristic": "will"
 				},
 				"primal": {
@@ -290,6 +307,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"cunning",
 					"characteristic": "cun"
 				},
 				"brawl": {
@@ -300,6 +318,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"brawn",
 					"characteristic": "br"
 				},
 				"gunnery": {
@@ -320,6 +339,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"brawn",
 					"characteristic": "br"
 				},
 				"melee-heavy": {
@@ -330,6 +350,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"brawn",
 					"characteristic": "br"
 				},
 				"melee-light": {
@@ -340,6 +361,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"brawn",
 					"characteristic": "br"
 				},
 				"ranged": {
@@ -380,6 +402,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"presence",
 					"characteristic": "pr"
 				},
 				"coercion": {
@@ -390,6 +413,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"willpower",
 					"characteristic": "will"
 				},
 				"deception": {
@@ -400,6 +424,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"cunning",
 					"characteristic": "cun"
 				},
 				"leadership": {
@@ -410,7 +435,8 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
-					"characteristic": "br"
+					"longCharacteristic":"presence",
+					"characteristic": "pr"
 				},
 				"negotiation": {
 					"value": 0,
@@ -420,6 +446,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"presence",
 					"characteristic": "pr"
 				},
 				"Knowledge": {
@@ -430,6 +457,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				}
 			},
@@ -442,6 +470,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"knowledge2": {
@@ -452,6 +481,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"knowledge3": {
@@ -462,6 +492,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"intellect",
 					"characteristic": "int"
 				},
 				"custom1": {
@@ -472,6 +503,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"",
 					"characteristic": "´"
 				},
 				"custom2": {
@@ -482,6 +514,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"",
 					"characteristic": ""
 				},
 				"custom3": {
@@ -492,6 +525,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"",
 					"characteristic": ""
 				},
 				"custom4": {
@@ -502,6 +536,7 @@
 					"setting": false,
 					"career": false,
 					"modifier": [],
+					"longCharacteristic":"",
 					"characteristic": ""
 				}
 			},

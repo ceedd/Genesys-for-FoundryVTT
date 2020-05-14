@@ -13,9 +13,9 @@
 					</div>
 					<div class="rightBox">
 						<div class="basicInfo"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></div>
-						<div class="basicInfo"><input name="data.basic.speciesArchtype" type="text" value="{{data.basic.speciesArchtype}}" placeholder="Species/Archtype" data-dtype="Text"/></div>
-						<div class="basicInfo"><input name="data.basic.career" type="text" value="{{data.basic.career}}" placeholder="career" data-dtype="Text"/></div>
-						<div class="basicInfo"><input name="data.basic.playername" type="text" value="{{data.basic.playername}}" placeholder="playername" data-dtype="Text"/></div>
+						<div class="basicInfo"><input name="data.basic.speciesArchtype" type="text" value="{{data.basic.speciesArchtype}}" placeholder="Species/Archtype" data-dtype="String"/></div>
+						<div class="basicInfo"><input name="data.basic.career" type="text" value="{{data.basic.career}}" placeholder="career" data-dtype="String"/></div>
+						<div class="basicInfo"><input name="data.basic.playername" type="text" value="{{data.basic.playername}}" placeholder="playername" data-dtype="String"/></div>
 					</div>
 				</div>
 			</div>
@@ -130,7 +130,8 @@
 				<p>CURRENT XP</p>
 			</div>
 		</div>
-
+		<a class="ability-mod int-dice">	<div><label>INITIATIVE</label></div></a>
+		<a class="ability-mod all-dice">	<div><label>ROLL</label></div></a>
 	</div>
 </header>
 {{!-- Sheet Tab Navigation --}}
@@ -153,6 +154,7 @@
 
 			<tr class="skillTableHead">
 				<th class="firstCellUpper">SKILL</th>
+				<th></th>
 				<th class="secondCell">SETTING</th>
 				<th class="thirdCell">CAREER</th>
 				<th class="fourthCell">RANK</th>
@@ -166,17 +168,17 @@
 				<td class="firstCell">
 					{{label}}({{characteristic}})
 				</td>
+				<td class="rollCell">
+					<a class="skill-roll rollable" data-label1="{{skill.value}}" data-label2="{{skill.longCharacteristic}}"data-label3="{{skill.label}}"><i class="fas fa-dice-d20"></i></a>
+				</td>
 				<td class="secondCell">
 					<input type="checkbox" class="CellSetting" name="data.skills.{{id}}.setting" {{checked skill.setting}}/>
 				</td>
 				<td class="thirdCell">
 					<input type="checkbox" class="CellCareer" name="data.skills.{{id}}.career" {{checked skill.career}} />
 				</td>
-				<!--		<td>
-				placeholder for rollble button
-				</td>-->
 				<td class="fourthCell">
-					<input name="data.skills.{{id}}.value" value="{{skill.value}}" type="range" min="0" max="5" min="0"data-dtype="Number" placeholder="0" />
+					<label>{{skill.value}}</label> <input name="data.skills.{{id}}.value" value="{{skill.value}}" type="range" min="0" max="5" min="0"data-dtype="Number" placeholder="0" />
 				</td>
 			</tr>
 			{{/each}}
@@ -226,30 +228,30 @@
 				<div class="charInfoSub">
 					<div class="row">
 						<label>Gender</label>
-						<input type="text" name="data.description.gender" value="{{data.description.gender}}"  data-dtype="Text"  />
+						<input type="text" name="data.description.gender" value="{{data.description.gender}}"  data-dtype="String"  />
 					</div>
 					<div class="row">
 						<label>Age</label>
-						<input type="text" name="data.description.age" value="{{data.description.age}}"  data-dtype="Text"  />
+						<input type="text" name="data.description.age" value="{{data.description.age}}"  data-dtype="String"  />
 					</div>
 					<div class="row">
 						<label>Height</label>
-						<input type="text" name="data.description.height" value="{{data.description.height}}"  data-dtype="Text"  />
+						<input type="text" name="data.description.height" value="{{data.description.height}}"  data-dtype="String"  />
 					</div>
 				</div>
 				<div class="charInfoSub">
 					<div class="row">
 						<label>Hair</label>	
-						<input type="text" name="data.description.hair" value="{{data.description.hair}}"  data-dtype="Text"  />
+						<input type="text" name="data.description.hair" value="{{data.description.hair}}"  data-dtype="String"  />
 					</div>
 					<div class="row">
 						<label>Eyes</label>	
-						<input type="text" name="data.description.eyes" value="{{data.description.eyes}}"  data-dtype="Text"  />
+						<input type="text" name="data.description.eyes" value="{{data.description.eyes}}"  data-dtype="String"  />
 					</div>
 					<div class="row">
 
 						<label>Notable</label>
-						<input type="text" name="data.description.notable" value="{{data.description.notable}}"  data-dtype="Text"  />
+						<input type="text" name="data.description.notable" value="{{data.description.notable}}"  data-dtype="String"  />
 					</div>
 				</div>
 			</div>
@@ -275,16 +277,16 @@
 			</div>
 			<div class="heroicBox">
 				<div class="row">
-					<label>Name</label> <input class="heroicInput" type="text" name="data.heroicAbility.name" value="{{data.heroicAbility.name}}" data-dtype="Text">
+					<label>Name</label> <input class="heroicInput" type="text" name="data.heroicAbility.name" value="{{data.heroicAbility.name}}" data-dtype="String">
 					</div>
 					<div class="row">
-						<label>Origin</label> <input class="heroicInput" type="text" name="data.heroicAbility.origin" value="{{data.heroicAbility.origin}}" data-dtype="Text"> 
+						<label>Origin</label> <input class="heroicInput" type="text" name="data.heroicAbility.origin" value="{{data.heroicAbility.origin}}" data-dtype="String"> 
 						</div>
 						<div class="row">
-							<label>Primary Effect</label> <input class="heroicInput" type="text" name="data.heroicAbility.primaryEffect" value="{{data.heroicAbility.primaryEffect}}" data-dtype="Text"> 
+							<label>Primary Effect</label> <input class="heroicInput" type="text" name="data.heroicAbility.primaryEffect" value="{{data.heroicAbility.primaryEffect}}" data-dtype="String"> 
 							</div>
 							<div class="row">
-								<label>Upgrade</label> <input class="heroicInput" type="text" name="data.heroicAbility.upgrade" value="{{data.heroicAbility.upgrade}}" data-dtype="Text"> 
+								<label>Upgrade</label> <input class="heroicInput" type="text" name="data.heroicAbility.upgrade" value="{{data.heroicAbility.upgrade}}" data-dtype="String"> 
 								</div>
 								<div class="footer">
 									<div class="row">

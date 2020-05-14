@@ -1,3 +1,6 @@
+import {genesysUtil} from "./genesysUtil.js";
+
+
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -8,10 +11,11 @@ export class SimpleActorSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["genesys", "sheet", "actor"],
-            template: "systems/Genesys/templates/actor-sheet.html",
+            template: "systems/genesys/templates/actor-sheet.html",
             width: 620,
             height: 800,
-            tabs: [{ navSelector: ".sheet-tabs",contentSelector: ".sheet-body", initial: "description"  }]
+            tabs: [{ navSelector: ".sheet-tabs",contentSelector: ".sheet-body", initial: "description"  }],
+            scrollY: ["sheet-body", "tab"]
         });
     }
 
@@ -93,6 +97,102 @@ activateListeners(html) {
     });
 
     html.find(".talents").on("click", ".talent-control", this._onClickTalentControl.bind(this));
+
+    //skill rolls
+    html.find('.rollable').click(ev =>{
+        event.preventDefault();
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+        const charlabel = dataset.label2;
+        const data = this.getData();
+        var char =0;
+        if(charlabel=="brawn"){
+            char= data.data.characteristics.brawn.value;
+        }    
+        else if(charlabel=="agility"){
+            char= data.data.characteristics.agility.value;
+        }        
+        else if(charlabel=="intellect"){
+            char= data.data.characteristics.intellect.value;
+        }           
+        else if(charlabel=="cunning"){
+            char= data.data.characteristics.cunning.value;
+        }      
+        else if(charlabel=="willpower"){
+           char= data.data.characteristics.willpower.value; 
+        }     
+        else if(charlabel=="presence"){
+            char= data.data.characteristics.presence.value;
+        } 
+        console.log(dataset.label3);
+        ChatMessage.create({
+            user: game.user._id,
+            speaker: this.getData(),
+            flavor: 'rolls ' + dataset.label3,
+            content: genesysUtil.diceArrayToString(genesysUtil.abilityToArray(char,dataset.label1))
+          });
+    });
+
+    html.find('.all-dice').click(ev => {
+   
+        console.log("click");
+        var array=[0,0,0,0,0,0];
+        var f=new FormApplication(array, {
+            classes: ["genesys", "sheet", "actor"],
+            template: "systems/genesys/templates/dicePopout.html",
+            width: 300,
+            height: 500,
+            title: "Dice Roller",
+            popOut: true
+        });
+        console.log(array);
+        f.render(true,{
+            left: 100,
+            right: 100
+
+        });
+
+    });
+    //initiative
+    html.find('.int-dice').click(ev =>{
+        const data=this.getData();
+        const charPres=data.data.characteristics.presence.value;
+        const charWill=data.data.characteristics.willpower.value;
+        const skillCool=data.data.skills.cool.value;
+        const skillVig=data.data.skills.vigilance.value;
+
+        let d = new Dialog({
+            title: "INITIATIVE",
+            content: "<p>COOL OR VIGILANCE</p>",
+            buttons: {
+             one: {
+              label: "COOL",
+              callback: () => ChatMessage.create({
+                user: game.user._id,
+                speaker: this.getData(),
+                flavor: 'rolls Initiative(cool)',
+                content: genesysUtil.genesysInitiative(genesysUtil.abilityToArray(charPres,skillCool))
+              })
+             },
+             two: {
+              label: "VIGILANCE",
+              callback: () => ChatMessage.create({
+                user: game.user._id,
+                speaker: this.getData(),
+                flavor: 'rolls Initiative(vigilance)',
+                content: genesysUtil.genesysInitiative(genesysUtil.abilityToArray(charWill,skillVig))
+              })
+             }
+            },
+            default: "two",
+           });
+           d.render(true);
+
+
+
+    });
+
+
 }
 
 /* -------------------------------------------- */
