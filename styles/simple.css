@@ -222,7 +222,7 @@ height: 100%;
 }
 .genesys .sheet-body {
 height: calc(100% - 465px);
-overflow: scroll;
+overflow-y: scroll;
 }
 .genesys .sheet-body .skillbody tr{
 height:35px;
@@ -262,17 +262,12 @@ width: 32%;
     font-weight: bold;
     font-size: large;
 }
-/*.genesys .skill-roll{
-	margin-right:5px;
-	background-image: url(../resources/triumph_black.svg);
-	background-repeat: no-repeat;
-	background-size: 20px;
-	color:#fffefd;
-	width: 20px;
-	height: 20px
-}*/
-
-/*--Talent--*/
+.genesys  .tab .characteristic{
+	width:48%;
+}
+.genesys  .tab .label{
+	width:50%;
+}
 .genesys .talentHeader {
 display:flex;
 flex-direction: row;
@@ -566,6 +561,30 @@ flex:0;
 		flex-direction: row;
 		height: 175px;
 }
+.genesys .vehicle .tab .resourceBox .resource{
+
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		width: 200px;
+		background: #3a4664;
+		border-radius: 0px;
+		height: 80px;
+}
+
+
+.genesys .vehicle .tab .resourceBox .resource .data{
+background: #8b362c;
+border-radius: 0px 0px 0px 0px;
+}
+.genesys .vehicle .tab .resourceBox .resource input{
+	text-align: center;
+	background: #fffffe;
+	width: 150px;
+	
+}
+
+
 /*CSS for the dice roller module, because i think the dice are to small*/
 
 .special-dice-roller input{

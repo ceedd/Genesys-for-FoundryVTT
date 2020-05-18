@@ -16,24 +16,24 @@
 						<div class="top">
 							<input type="number" name="data.hullTrauma.value" value="{{data.hullTrauma.value}}" min="0"
 								data-dtype="Number" />
-							<input type="number" name="data.hullTrauma.threshold" value="{{data.hullTrauma.threshold}}" min="0"
-								data-dtype="Number" />
+							<input type="number" name="data.hullTrauma.threshold" value="{{data.hullTrauma.threshold}}"
+								min="0" data-dtype="Number" />
 						</div>
 						<div class="bottom">
-							<label>CURRENT</label>
+							
 							<label>TRESHOLD</label>
 						</div>
 					</div>
 					<div class="resource">
 						<div class="data"><label>SYSTEM STRAIN</label></div>
 						<div class="top">
-							<input type="number" name="data.systemStrain.value" value="{{data.systemStrain.value}}" min="0"
-								data-dtype="Number" />
-							<input type="number" name="data.systemStrain.threshold" value="{{data.systemStrain.threshold}}" min="0"
-								data-dtype="Number" />
+							<input type="number" name="data.systemStrain.value" value="{{data.systemStrain.value}}"
+								min="0" data-dtype="Number" />
+							<input type="number" name="data.systemStrain.threshold"
+								value="{{data.systemStrain.threshold}}" min="0" data-dtype="Number" />
 						</div>
 						<div class="bottom">
-							<label>CURRENT</label>
+							
 							<label>TRESHOLD</label>
 						</div>
 					</div>
@@ -51,46 +51,158 @@
 
 			{{!-- Stats --}}
 			<div class="tab stats" data-group="primary" data-tab="stats">
-				
-				<table>
-					<tr class="skillTableHead">
-						<th class="firstCellUpper">STAT</th>
-						<th class="secondCell">VALUE</th>
-					</tr>
 
-					{{#each data.statsVec as |stat id|}}
-					<tr>
-						<td class="firstCell">
-							<label>{{stat.label}}</label>
-						</td>
-						<td class="secondCell">
-							<input type="text" name="data.stats.{{Id}}.value" value="{{stat.value}}"
-								placeholder="{{stat.value}}" data-dtype="Number" />
-						</td>
-					</tr>
-					{{/each}}
-				</table>
+				<div class="resourceBox">
 
-			</div>
-
-			{{!-- Items --}}
-
-			<div class="tab items" data-group="primary" data-tab="items">
-				<ol class="items-list">
-					{{#each actor.gear as |item id|}}
-					<li class="item flexrow" data-item-id="{{item._id}}">
-						<div class="listBox">
-							<img src="{{item.img}}" title="{{item.name}}" />
-							<p class="item-name">{{item.name}}</p>
-							<div class="item-controls">
-								<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-								<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-							</div>
+					<div class="resource">
+						<div class="data"><label>DEFENSE</label></div>
+						<div class="top">
+							<input type="number" name="data.statsVec.defence.value"
+								value="{{data.statsVec.defence.value}}" min="0" data-dtype="Number" />
 						</div>
-					</li>
-					{{/each}}
-				</ol>
-			</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>ARMOR</label></div>
+						<div class="top">
+							<input type="number" name="data.statsVec.armor.value" value="{{data.statsVec.armor.value}}"
+								min="0" data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>SHILLOUTTE</label></div>
+						<div class="top">
+							<input type="number" name="data.statsVec.shilloutte.value"
+								value="{{data.statsVec.shilloutte.value}}" min="0" data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="resourceBox">
+					<div class="resource">
+						<div class="data"><label>SPEED</label></div>
+						<div class="top">
+							<input type="number" name="data.statsVec.speed.value" value="{{data.statsVec.speed.value}}"
+								min="0" data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>HANDLING</label></div>
+						<div class="top">
+							<input type="number" name="data.statsVec.handling.value"
+								value="{{data.statsVec.handling.value}}" min="0" data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>CONTROL SKILL</label></div>
+						<div class="top">
+							<input type="text" name="data.statsVec.controlSkill.value" value="{{data.statsVec.controlSkill.value}}" min="0"
+								data-dtype="Text" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+				</div>
+				<div class="resourceBox">
+					<div class="resource">
+						<div class="data"><label>COMPLEMENT</label></div>
+						<div class="top">
+							<input type="text" name="data.statsVec.Complement.value" value="{{data.statsVec.Complement.value}}"
+								min="0" data-dtype="Text" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>PASSENGER CAPACITY</label></div>
+						<div class="top">
+							<input type="number" name="data.statsVec.passengerCapacity.value"
+								value="{{data.statsVec.passengerCapacity.value}}" min="0" data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>CONSUMABLES</label></div>
+						<div class="top">
+							<input type="number" name="data.statsVec.consumables.value" value="{{data.statsVec.consumables.value}}" min="0"
+								data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+				</div>
+				<div class="resourceBox">
+					<div class="resource">
+						<div class="data"><label>ENCUMBRANCE CAPACITY</label></div>
+						<div class="top">
+							<input type="number" name="data.statsVec.encumbranceCapacity.value" value="{{data.statsVec.encumbranceCapacity.value}}"
+								min="0" data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>PRICE</label></div>
+						<div class="top">
+							<input type="number" name="data.statsVec.price.value"
+								value="{{data.statsVec.price.value}}" min="0" data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>RARITY</label></div>
+						<div class="top">
+							<input type="number" name="data.statsVec.rarity.value" value="{{data.statsVec.rarity.value}}" min="0"
+								data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							
+						</div>
+					</div>
+				</div>
+				{{!-- Items --}}
+
+				<div class="tab items" data-group="primary" data-tab="items">
+					<ol class="items-list">
+						{{#each actor.gear as |item id|}}
+						<li class="item flexrow" data-item-id="{{item._id}}">
+							<div class="listBox">
+								<img src="{{item.img}}" title="{{item.name}}" />
+								<p class="item-name">{{item.name}}</p>
+								<div class="item-controls">
+									<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+									<a class="item-control item-delete" title="Delete Item"><i
+											class="fas fa-trash"></i></a>
+								</div>
+							</div>
+						</li>
+						{{/each}}
+					</ol>
+				</div>
 		</section>
 
 	</div>

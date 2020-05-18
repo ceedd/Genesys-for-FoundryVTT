@@ -16,7 +16,7 @@ export class VehicleActorSheet extends GenesysActorSheet {
           classes: ["genesys", "sheet", "actor"],
           template: "systems/genesys/templates/vehicle-sheet.html",
         width: 600,
-        height: 600,
+        height: 620,
         tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
       });
     }

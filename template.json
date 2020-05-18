@@ -604,11 +604,11 @@
 				},
 				"controlSkill": {
 					"label": "Control Skill",
-					"value": ""
+					"value": "Riding"
 				},
 				"complement": {
 					"label": "Complement",
-					"value": ""
+					"value": "1 Pilot"
 				},
 				"passengerCapacity": {
 					"label": "Passenger Capacity",
