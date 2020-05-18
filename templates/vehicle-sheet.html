@@ -1,0 +1,97 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<div class="vehicle">
+		{{!-- Sheet Header --}}
+		<header class="sheet-header">
+			<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100"
+				width="100" />
+
+
+			<div class="header-fields">
+				<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+
+				<div class="resourceBox">
+
+					<div class="resource">
+						<div class="data"><label>HULL TRAUMA</label></div>
+						<div class="top">
+							<input type="number" name="data.hullTrauma.value" value="{{data.hullTrauma.value}}" min="0"
+								data-dtype="Number" />
+							<input type="number" name="data.hullTrauma.threshold" value="{{data.hullTrauma.threshold}}" min="0"
+								data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							<label>CURRENT</label>
+							<label>TRESHOLD</label>
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>SYSTEM STRAIN</label></div>
+						<div class="top">
+							<input type="number" name="data.systemStrain.value" value="{{data.systemStrain.value}}" min="0"
+								data-dtype="Number" />
+							<input type="number" name="data.systemStrain.threshold" value="{{data.systemStrain.threshold}}" min="0"
+								data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							<label>CURRENT</label>
+							<label>TRESHOLD</label>
+						</div>
+					</div>
+				</div>
+		</header>
+
+		{{!-- Sheet Body --}}
+
+		<nav class="sheet-tabs tabs" data-group="primary">
+			<a class="item" data-tab="stats">STATS</a>
+			<a class="item" data-tab="items">EQUIPMENT</a>
+		</nav>
+
+		<section class="sheet-body">
+
+			{{!-- Stats --}}
+			<div class="tab stats" data-group="primary" data-tab="stats">
+				
+				<table>
+					<tr class="skillTableHead">
+						<th class="firstCellUpper">STAT</th>
+						<th class="secondCell">VALUE</th>
+					</tr>
+
+					{{#each data.statsVec as |stat id|}}
+					<tr>
+						<td class="firstCell">
+							<label>{{stat.label}}</label>
+						</td>
+						<td class="secondCell">
+							<input type="text" name="data.stats.{{Id}}.value" value="{{stat.value}}"
+								placeholder="{{stat.value}}" data-dtype="Number" />
+						</td>
+					</tr>
+					{{/each}}
+				</table>
+
+			</div>
+
+			{{!-- Items --}}
+
+			<div class="tab items" data-group="primary" data-tab="items">
+				<ol class="items-list">
+					{{#each actor.gear as |item id|}}
+					<li class="item flexrow" data-item-id="{{item._id}}">
+						<div class="listBox">
+							<img src="{{item.img}}" title="{{item.name}}" />
+							<p class="item-name">{{item.name}}</p>
+							<div class="item-controls">
+								<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+								<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+							</div>
+						</div>
+					</li>
+					{{/each}}
+				</ol>
+			</div>
+		</section>
+
+	</div>
+</form>

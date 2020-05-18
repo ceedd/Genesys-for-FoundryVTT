@@ -1,0 +1,410 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<div class="character">
+		{{!-- Sheet Header --}}
+
+		<header class="sheet-header">
+			<div class="headerTop">
+				<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100"
+					width="100" />
+				<div class="header-fields">
+					<div class="basicInfoBox">
+						<div class="leftBox">
+							<div class="discriptor">NAME</div>
+							<div class="discriptor">SPECIES/ARCHTYPE</div>
+							<div class="discriptor">CAREER</div>
+							<div class="discriptor">PLAYER</div>
+						</div>
+						<div class="rightBox">
+							<div class="basicInfo"><input name="name" type="text" value="{{actor.name}}"
+									placeholder="Name" /></div>
+							<div class="basicInfo"><input name="data.basic.speciesArchtype" type="text"
+									value="{{data.basic.speciesArchtype}}" placeholder="Species/Archtype"
+									data-dtype="String" /></div>
+							<div class="basicInfo"><input name="data.basic.career" type="text"
+									value="{{data.basic.career}}" placeholder="career" data-dtype="String" /></div>
+							<div class="basicInfo"><input name="data.basic.playername" type="text"
+									value="{{data.basic.playername}}" placeholder="playername" data-dtype="String" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="headerBottom">
+				<div class="resourceBox">
+					<div class="resource">
+						<div class="data"><label>SOAK</label></div>
+						<div class="top">
+							<input type="number" name="data.soak.value" value="{{data.soak.value}}" min="0"
+								data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							</br>
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>WOUNDS</label></div>
+
+						<div class="top">
+							<input type="number" name="data.wounds.value" value="{{data.wounds.value}}" min="0"
+								data-dtype="Number" />
+							<input type="number" name="data.wounds.max" value="{{data.wounds.max}}" min="0"
+								data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							<label>CURRENT</label>
+							<label>TRESHOLD</label>
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>Strain </label></div>
+						<div class="top">
+							<input type="number" name="data.strain.value" value="{{data.strain.value}}" min="0"
+								data-dtype="Number" />
+							<input type="number" name="data.strain.max" value="{{data.strain.max}}" min="0"
+								data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							<label>CURRENT</label>
+							<label>TRESHOLD</label>
+						</div>
+					</div>
+					<div class="resource">
+						<div class="data"><label>DEFENCE</label></div>
+						<div class="top">
+							<input type="number" name="data.defence.ranged" value="{{data.defence.ranged}}" min="0"
+								data-dtype="Number" />
+							<input type="number" name="data.defence.melee" value="{{data.defence.melee}}" min="0"
+								data-dtype="Number" />
+						</div>
+						<div class="bottom">
+							<label>RANGED</label>
+							<label>MELEE</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+
+		{{!-- Characteristics --}}
+
+		<div class="characteristics">
+			<div class="singleCharacteristics">
+				<input type="number" name="data.characteristics.brawn.value"
+					value="{{data.characteristics.brawn.value}}" min="0" data-dtype="Number" />
+				<p class="descriptor">BRAWN</p>
+			</div>
+			<div class="singleCharacteristics">
+				<input type="number" name="data.characteristics.agility.value"
+					value="{{data.characteristics.agility.value}}" min="0" data-dtype="Number" />
+				<p class="descriptor">AGILITY</p>
+			</div>
+			<div class="singleCharacteristics">
+				<input type="number" name="data.characteristics.intellect.value"
+					value="{{data.characteristics.intellect.value}}" min="0" data-dtype="Number" />
+				<p class="descriptor">INTELLECT</p>
+			</div>
+			<div class="singleCharacteristics">
+				<input type="number" name="data.characteristics.cunning.value"
+					value="{{data.characteristics.cunning.value}}" min="0" data-dtype="Number" />
+				<p class="descriptor">CUNNING</p>
+			</div>
+			<div class="singleCharacteristics">
+				<input type="number" name="data.characteristics.willpower.value"
+					value="{{data.characteristics.willpower.value}}" min="0" data-dtype="Number" />
+				<p class="descriptor">WILLPOWER</p>
+			</div>
+			<div class="singleCharacteristics">
+				<input type="number" name="data.characteristics.presence.value"
+					value="{{data.characteristics.presence.value}}" min="0" min="0" data-dtype="Number" />
+				<p class="descriptor">PRESENCE</p>
+			</div>
+		</div>
+
+		{{!-- EXP and buttons --}}
+
+
+		<div class="exp">
+			<div class="subExp">
+				<input type="number" name="data.totalExperience" value="{{data.totalExperience}}" min="0"
+					data-dtype="Number" />
+				<div class="descriptor">
+					<p>TOTAL XP</p>
+				</div>
+			</div>
+			<div class="subExp">
+				<input type="number" name="data.experience" value="{{data.experience}}" min="0" data-dtype="Number" />
+				<div class="descriptor">
+					<p>CURRENT XP</p>
+				</div>
+			</div>
+			<a class="ability-mod int-dice">
+				<div><label>INITIATIVE</label></div>
+			</a>
+			<a class="ability-mod all-dice">
+				<div><label>ROLL</label></div>
+			</a>
+		</div>
+		</header>
+
+
+
+		{{!-- Sheet Tab Navigation --}}
+
+		<nav class="sheet-tabs tabs" data-group="primary">
+			<a class="item" data-tab="skills">SKILLS</a>
+			<a class="item" data-tab="talents">TALENTS</a>
+			<a class="item" data-tab="biogragphy">BIO</a>
+			<a class="item" data-tab="injuries">INJURIES</a>
+			<a class="item" data-tab="items">EQUIPMENT</a>
+			<a class="item" data-tab="note">NOTES</a>
+		</nav>
+
+		{{!-- Sheet Body --}}
+
+		<section class="sheet-body">
+
+			{{!-- Skill Tab--}}
+
+			<div class="tab skills" data-group="primary" data-tab="skills">
+
+
+
+				<table>
+
+					<tr class="skillTableHead">
+						<th class="firstCellUpper">SKILL</th>
+						<th></th>
+						<th class="secondCell">SETTING</th>
+						<th class="thirdCell">CAREER</th>
+						<th class="fourthCell">RANK</th>
+					</tr>
+
+
+
+
+					{{#each data.skills as |skill id|}}
+					<tr>
+						<td class="firstCell">
+							{{label}}({{characteristic}})
+						</td>
+						<td class="rollCell">
+							<a class="skill-roll rollable" data-label1="{{skill.value}}"
+								data-label2="{{skill.longCharacteristic}}" data-label3="{{skill.label}}"><i
+									class="fas fa-dice-d20"></i></a>
+						</td>
+						<td class="secondCell">
+							<input type="checkbox" class="CellSetting" name="data.skills.{{id}}.setting"
+								{{checked skill.setting}} />
+						</td>
+						<td class="thirdCell">
+							<input type="checkbox" class="CellCareer" name="data.skills.{{id}}.career"
+								{{checked skill.career}} />
+						</td>
+						<td class="fourthCell">
+							<label>{{skill.value}}</label> <input name="data.skills.{{id}}.value"
+								value="{{skill.value}}" type="range" min="0" max="5" min="0" data-dtype="Number"
+								placeholder="0" />
+						</td>
+					</tr>
+					{{/each}}
+					{{#each data.customSkils as |customSkil cId|}}
+					<!--Custom Skill need to be to a system that creates them on demand, rather than 3+4 placeholder-->
+					<tr>
+						<td class="firstCell">
+							<input type="text" name="data.customSkils.{{cId}}.label" value="{{customSkil.label}}"
+								placeholder="{{customSkils.label}}" data-dtype="String" />
+						</td>
+						<td class="secondCell">
+							<input type="checkbox" class="CellSetting" name="data.customSkils.{{cId}}.setting"
+								{{checked customSkil.setting}} />
+						</td>
+						<td class="thirdCell">
+							<input type="checkbox" class="CellCareer" name="data.customSkils.{{cId}}.career"
+								{{checked customSkil.career}} />
+						</td>
+						<td class="fourthCell">
+							<input name="data.customSkils.{{cId}}.value" value="{{customSkil.value}}" type="range"
+								min="0" max="5" min="0" data-dtype="Number" placeholder="0" />
+						</td>
+					</tr>
+					{{/each}}
+				</table>
+			</div>
+
+
+			{{!-- Talents Tab --}}
+
+			<div class="tab talents" data-group="primary" data-tab="talents">
+				<ol class="items-list">
+					{{#each actor.talent as |item id|}}
+					<li class="item flexrow" data-item-id="{{item._id}}">
+						<div class="listBox">
+							<img src="{{item.img}}" title="{{item.name}}" />
+							<h4 class="item-name">{{item.name}}</h4>
+							<div class="item-controls">
+								<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+								<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+							</div>
+						</div>
+					</li>
+					{{/each}}
+				</ol>
+			</div>
+
+			{{!-- Biogragphy Tab --}}
+			<!--Works for know, look might have to changed-->
+
+			<div class="tab biogragphy" data-group="primary" data-tab="biogragphy">
+				<div class="bioBox">
+					<div class="charInfo">
+						<div class="charInfoSub">
+							<div class="row">
+								<label>Gender</label>
+								<input type="text" name="data.description.gender" value="{{data.description.gender}}"
+									data-dtype="String" />
+							</div>
+							<div class="row">
+								<label>Age</label>
+								<input type="text" name="data.description.age" value="{{data.description.age}}"
+									data-dtype="String" />
+							</div>
+							<div class="row">
+								<label>Height</label>
+								<input type="text" name="data.description.height" value="{{data.description.height}}"
+									data-dtype="String" />
+							</div>
+						</div>
+						<div class="charInfoSub">
+							<div class="row">
+								<label>Hair</label>
+								<input type="text" name="data.description.hair" value="{{data.description.hair}}"
+									data-dtype="String" />
+							</div>
+							<div class="row">
+								<label>Eyes</label>
+								<input type="text" name="data.description.eyes" value="{{data.description.eyes}}"
+									data-dtype="String" />
+							</div>
+							<div class="row">
+
+								<label>Notable</label>
+								<input type="text" name="data.description.notable" value="{{data.description.notable}}"
+									data-dtype="String" />
+							</div>
+						</div>
+					</div>
+					<div class="outerBox">
+						<div class="box">
+							<label> Strength</label>
+							<textarea class="strength" rows="4" cols="50"
+								name="data.bioStrength">{{data.bioStrength}}</textarea>
+						</div>
+						<div class="box">
+							<label> Flaw</label>
+							<textarea class="flaw" rows="4" cols="50" name="data.bioFlaw"> {{data.bioFlaw}}</textarea>
+						</div>
+					</div>
+					<div class="outerBox">
+						<div class="box">
+							<label>Desire</label>
+							<textarea class="desire" rows="4" cols="50"
+								name="data.bioDesire">{{data.bioDesire}}</textarea>
+						</div>
+						<div class="box">
+							<label> Fear</label>
+							<textarea class="fear" rows="4" cols="50" name="data.bioFear">{{data.bioDesire}}</textarea>
+						</div>
+					</div>
+					<div class="heroicBox">
+						<label class=HeroicTitel>HEROIC ABILITY</label>
+						<div class="row">
+							<label>Name</label> <input class="heroicInput" type="text" name="data.heroicAbility.name"
+								value="{{data.heroicAbility.name}}" data-dtype="String">
+						</div>
+						<div class="row">
+							<label>Origin</label> <input class="heroicInput" type="text"
+								name="data.heroicAbility.origin" value="{{data.heroicAbility.origin}}"
+								data-dtype="String">
+						</div>
+						<div class="row">
+							<label>Primary Effect</label> <input class="heroicInput" type="text"
+								name="data.heroicAbility.primaryEffect" value="{{data.heroicAbility.primaryEffect}}"
+								data-dtype="String">
+						</div>
+						<div class="row">
+							<label>Upgrade</label> <input class="heroicInput" type="text"
+								name="data.heroicAbility.upgrade" value="{{data.heroicAbility.upgrade}}"
+								data-dtype="String">
+						</div>
+						<div class="footer">
+							<div class="row">
+								<label>Total Ability Points</label> <input class="heroicInput" type="text"
+									name="data.heroicAbility.totalAp" value="{{data.heroicAbility.totalAp}}" min="0"
+									data-dtype="Number">
+							</div>
+							<div class="row">
+								<label>Available Abilty Points</label> <input class="heroicInput" type="text"
+									name="data.heroicAbility.availableAp" value="{{data.heroicAbility.availableAp}}"
+									min="0" data-dtype="Number">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Hover information would be nice-->
+			{{!-- Injuries Tab --}}
+			<div class="tab injuries" data-group="primary" data-tab="injuries">
+
+				<ol class="items-list">
+					{{#each actor.injury as |item id|}}
+					<li class="item flexrow" data-item-id="{{item._id}}">
+						<div class="listBox">
+
+							<img src="{{item.img}}" title="{{item.name}}" />
+
+							<h4 class="item-name">{{item.name}}</h4>
+							<div class="item-controls">
+								<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+								<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+							</div>
+						</div>
+					</li>
+					{{/each}}
+				</ol>
+
+			</div>
+
+			{{!-- Owned Items Tab --}}
+			<div class="tab items" data-group="primary" data-tab="items">
+
+				<div class="itemHeader">
+					<p name="Money">MONEY </p> <input type="number" class="money" name="data.money"
+						value="{{data.money}}" min="0" data-dtype="Number">
+
+						{{data.characteristics.presence.value}}
+						{{data.statsVec.defence.value}}
+				</div>
+
+				<ol class="items-list">
+					{{#each actor.gear as |item id|}}
+					<li class="item flexrow" data-item-id="{{item._id}}">
+						<div class="listBox">
+							<img src="{{item.img}}" title="{{item.name}}" />
+							<p class="item-name">{{item.name}}</p>
+							<div class="item-controls">
+								<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+								<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+							</div>
+						</div>
+					</li>
+					{{/each}}
+				</ol>
+			</div>
+			{{!-- Notes Tab --}}
+			<div class="tab notes" data-group="primary" data-tab="note">
+				{{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
+			</div>
+		</section>
+	</div>
+</form>
