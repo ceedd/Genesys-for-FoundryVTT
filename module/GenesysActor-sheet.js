@@ -13,7 +13,7 @@ export class GenesysActorSheet extends ActorSheet {
 
 /*--------------------------------------*/
 /*Saves scroll position of a div        */
-/*Big thanks to  Moon Man on the discord*/
+/*Big thanks to  Moo Man on the discord*/
 async _render(force = false, options = {}) {
     this._saveScrollPos(); // Save scroll positions
     await super._render(force, options);
