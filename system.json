@@ -2,7 +2,7 @@
   "name": "genesys",
   "title": "Genesys",
   "description": "Trying to make a charactersheet for Genesys based on the simple worldbuilding system made by Atropos.",
-  "version": 0.20,
+  "version": 0.2,
   "minimumCoreVersion": "0.5.7",
   "compatibleCoreVersion": "0.5.7",
   "templateVersion": 2,
