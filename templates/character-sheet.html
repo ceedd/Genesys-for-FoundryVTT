@@ -212,8 +212,17 @@
 					<!--Custom Skill need to be to a system that creates them on demand, rather than 3+4 placeholder-->
 					<tr>
 						<td class="firstCell">
-							<input type="text" name="data.customSkils.{{cId}}.label" value="{{customSkil.label}}"
-								placeholder="{{customSkils.label}}" data-dtype="String" />
+							<input type="text" class="label" name="data.customSkils.{{cId}}.label" value="{{customSkil.label}}"
+								placeholder="{{customSkils.label}}" data-dtype="Text" />
+
+								<input type="text" class="characteristic" name="data.customSkils.{{cId}}.longCharacteristic" value="{{customSkil.longCharacteristic}}"
+								placeholder="{{customSkils.longCharacteristic}}" data-dtype="Text" />
+								
+						</td>
+						<td class="rollCell">
+							<a class="skill-roll rollable" data-label1="{{customSkil.value}}"
+								data-label2="{{customSkil.longCharacteristic}}" data-label3="{{customSkil.label}}"><i
+									class="fas fa-dice-d20"></i></a>
 						</td>
 						<td class="secondCell">
 							<input type="checkbox" class="CellSetting" name="data.customSkils.{{cId}}.setting"
@@ -224,7 +233,7 @@
 								{{checked customSkil.career}} />
 						</td>
 						<td class="fourthCell">
-							<input name="data.customSkils.{{cId}}.value" value="{{customSkil.value}}" type="range"
+							<label>{{customSkil.value}}</label> <input name="data.customSkils.{{cId}}.value" value="{{customSkil.value}}" type="range"
 								min="0" max="5" min="0" data-dtype="Number" placeholder="0" />
 						</td>
 					</tr>
@@ -382,8 +391,6 @@
 					<p name="Money">MONEY </p> <input type="number" class="money" name="data.money"
 						value="{{data.money}}" min="0" data-dtype="Number">
 
-						{{data.characteristics.presence.value}}
-						{{data.statsVec.defence.value}}
 				</div>
 
 				<ol class="items-list">
