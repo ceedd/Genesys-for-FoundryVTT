@@ -2,14 +2,21 @@
 
 .genesys .editable{
 height:100%;
-background: #fffffff;
+background: #fffffe;
+max-height: 1080px;
 }
 .genesys .window-content {
 height: 100%;
 padding: 5px;
 overflow-y: hidden;
 background: #f7f5ef;
-
+}
+.genesys ol{
+	margin: 1px;
+    padding: 5px;
+}
+.genesys .character, .vehicle {
+	height: 100%;	
 }
 .genesys input[type="number"] {
 min-width: 20px;
@@ -45,10 +52,12 @@ background:#fffffe;
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
 -webkit-appearance: none;
--moz-appearance: none;
 appearance: none;
 margin: 0; 
 }
+input[type="number"] {
+	 -moz-appearance: textfield;
+	 }
 .genesys .profile-img{
 height: 150px !important;
 width: 150px;
@@ -66,7 +75,6 @@ border-radius: 10px;
 display:flex;
 flex-direction:row;
 width: 100%;
-
 }
 .genesys .headerTop {
 display: flex;
@@ -119,7 +127,6 @@ font-size: 20px;
 .genesys .resource{
 
 display: flex;
-justify-content: center;
 flex-direction:column;
 text-align:center;
 width: 150px;
@@ -131,7 +138,7 @@ background: #8b362c;
 border-radius: 10px 10px 0px 0px;
 }
 .genesys .resourceBox {
-color:#fffefd;
+color:#ffffed;
 }
 /*characteristics*/
 .genesys .characteristics{
@@ -162,7 +169,7 @@ linear-gradient(45deg, transparent 0px, #3a4664 0) bottom left;
 background-size: 50% 60%;
 background-repeat: no-repeat;
 width: 80px;
-color: #fffefd;
+color: #ffffed;
 height: fit-content;
 }
 
@@ -187,7 +194,7 @@ background: #d8ecf7;
 .genesys .exp .subExp .descriptor{
 width:100%;
 background:#8b362c;
-color: #fffefd;
+color: #ffffed;
 height: fit-content;
 border-radius:0px 0px 15px 15px;
 display: flex;
@@ -205,18 +212,17 @@ border-top: 1px solid #AAA;
 border-bottom: 1px solid #AAA;
 }.genesys .tabs .item{
 -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0 50%);
+clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0 50%);
 background: #41434b;
-color: #fffefd;
+color: #ffffed;
 
 }
 .genesys .skillbody {
-
-overflow: auto;
 height: 100%;
 }
 .genesys .sheet-body {
 height: calc(100% - 465px);
-overflow: auto;
+overflow: scroll;
 }
 .genesys .sheet-body .skillbody tr{
 height:35px;
@@ -225,9 +231,14 @@ height:35px;
 height:20px;
 text-align: center;
 vertical-align: middle;
+width: 10%;
 }
 .genesys table {
 height: 100%;
+}
+.genesys .rollCell {
+	display: flex;
+    justify-content: center;
 }
 .genesys tbody{
 background: #d8ecf7;
@@ -237,14 +248,30 @@ color:#464646;
 }
 .genesys .firstCell{
 text-transform: uppercase;
+width: 32%;
 }
-/*.genesys .fourthCell{
-background: url("../resources/bar.svg");
-background-repeat:no-repeat;
-background-position: center;
-background-size: cover;
+.genesys .fourthCell{
+ display:flex;
+ flex-direction: row;;
+ height: 20px;
+    vertical-align: middle;
+	justify-content: center;
 }
-*/
+.genesys .fourthCell label {
+	margin-right: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+/*.genesys .skill-roll{
+	margin-right:5px;
+	background-image: url(../resources/triumph_black.svg);
+	background-repeat: no-repeat;
+	background-size: 20px;
+	color:#fffefd;
+	width: 20px;
+	height: 20px
+}*/
+
 /*--Talent--*/
 .genesys .talentHeader {
 display:flex;
@@ -343,10 +370,6 @@ width: 30px;
 .genesys .editor, .genesys .editor-content{
 height: 100%;
 }
-.genesys .tab{
-height:100%
-}
-
 .genesys .items-list img{
 	height:50px;
 	width:50px;
@@ -377,7 +400,7 @@ margin-right:5px;
 	height: 52px;
 }
 .genesys .items-list .item-name{
-	width: 72px;
+	width: 100%;
     margin-left: 10px;
     font-size: large;
 }
@@ -430,4 +453,123 @@ resize:none;
 margin: 5px 0px 5px 5px;
 width: 50%;
 
+}
+.genesys .diceRoller-header {
+	height:50px;
+}
+.genesys .diceRoller-body {
+	height: 500px;
+}
+.genesys .diceRoller-body img{
+	height:50px;
+	width:50px;
+	border: 0px;
+}
+.genesys  .diceRoller-body .rollerBox{
+	display:flex;
+	flex-direction: column;
+}
+.genesys  .diceRoller-body .rollerBox a{
+	width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.genesys  .diceRoller-body .flex-row{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin: 5px;
+}
+.genesys .dialog-button{
+	background: #3a4664;
+	color:#ffffed;
+}
+.genesys .diceRoller-body input[type="number"]{
+	height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: x-large;
+    background: #fffffe;
+    color: #191813;
+}
+.genesys .diceRoller-body p{
+	font-size: x-large;
+	margin: 1px;
+}
+.genesys .diceRoller-body .flex-col{
+	display: flex;
+    justify-content: center;
+	align-items: center;
+}
+.genesys .ability-mod{
+	background: #3a4664;
+    color: #ffffed;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.genesys .ability-mod label:hover{
+	cursor: pointer;
+}
+.genesys .diceRoller-body .boostDie{
+	background-image: url(../resources/boost.svg);
+	background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+}
+.genesys .diceRoller-body .abilityDie{
+	background-image: url(../resources/ability.svg);
+	background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+}
+.genesys .diceRoller-body .proficiencyDie{
+	background-image: url(../resources/proficiency.svg);
+	background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+}
+.genesys .diceRoller-body .setbackDie{
+	background-image: url(../resources/setback.svg);
+	background-repeat: no-repeat;
+    background-size: contain;
+	width: 50px;
+	color:#ffffed;
+}
+.genesys .diceRoller-body .difficultyDie{
+	background-image: url(../resources/difficulty.svg);
+	background-repeat: no-repeat;
+    background-size: contain;
+	width: 50px;
+	color:#ffffed;
+}
+.genesys .diceRoller-body .challengeDie{
+	background-image: url(../resources/challenge.svg);
+	background-repeat: no-repeat;
+    background-size: contain;
+	width: 50px;
+	color:#ffffed;
+}
+/*CSS of Vehicle Sheet is similar to that of character with few changes*/
+.genesys .vehicle .header-fields{
+flex-direction:column;
+}
+.genesys .vehicle .sheet-header h1 {
+flex:0;
+}
+.genesys .vehicle .sheet-header{
+		flex-direction: row;
+		height: 175px;
+}
+/*CSS for the dice roller module, because i think the dice are to small*/
+
+.special-dice-roller input{
+	height:35px !important;
+	width: 35px !important;
+	background-size: 35px !important;
 }

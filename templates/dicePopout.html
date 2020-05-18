@@ -1,0 +1,54 @@
+<form class="{{cssClass}}" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="diceRoller-header">
+        {{{titel}}}
+    </header>
+
+
+    <section class="diceRoller-body">
+            <div class="rollerBox">
+                <div class="flex-row">
+                    <div class="flex-col boostDie"><a class="boostMinus"><p>-</p></a></div>
+                    <div class="flex-col"><input type="number" class="boost" id="boost" min="0" value="{{ability}}"></div>
+                    <div class="flex-col boostDie"><a class="boostPlus"><p>+</p></a></div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col abilityDie"><a class="abilityMinus"><p>-</p></a></div>
+                    <div class="flex-col"><input type="number" class="ability" id="ability" min="0" value="{{boost}}"></div>
+                    <div class="flex-col abilityDie"><a class="abilityPlus"><p>+</p></a></div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col proficiencyDie"><a class="proficiencyMinus"><p>-</p></a></div>
+                    <div class="flex-col"><input type="number" class="proficiency" id="proficiency" min="0" value="{{proficency}}"></div>
+                    <div class="flex-col proficiencyDie"><a class="proficiencyPlus"><p>+</p></a></div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col setbackDie"><a class="setbackMinus"><p>-</p></a></div>
+                    <div class="flex-col"><input type="number" class="setback" id="setback" min="0" value="{{setback}}"></div>
+                    <div class="flex-col setbackDie"><a class="setbackPlus"><p>+</p></a></div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col difficultyDie"><a class="difficultyMinus"><p>-</p></a></div>
+                    <div class="flex-col"><input type="number" class="difficulty" id="difficulty" min="0" value="{{difficulty}}"></div>
+                    <div class="flex-col difficultyDie"><a class="difficultyPlus"><p>+</p></a></div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col challengeDie"><a class="challengeMinus"><p>-</p></a></div>
+                    <div class="flex-col"><input type="number" class="challenge" id="challenge" min="0" value="{{challenge}}"></div>
+                    <div class="flex-col challengeDie"><a class="challengePlus"><p>+</p></a></div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col"><a class="close">	<div><label>Close</label></div></a></div>
+                    <div class="flex-col"><a class="roll">	<div><label>Roll</label></div></a></div>
+                </div>
+
+            </div>
+    </section>
+
+    <script>
+
+
+    </script>
+</form>
+

@@ -1,72 +1,76 @@
+import {genesysUtil} from "./genesysUtil.js";
+import { dicePopout } from "./dicePopout.js";
+import { GenesysActorSheet } from "./GenesysActor-sheet.js";
+
+
 /**
- * Extend the basic ActorSheet with some very simple modifications
+ * Extend the base sheet for characters
  * @extends {ActorSheet}
  */
-export class SimpleActorSheet extends ActorSheet {
+export class CharacterActorSheet extends GenesysActorSheet {
 
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["genesys", "sheet", "actor"],
-            template: "systems/Genesys/templates/actor-sheet.html",
+            template: "systems/genesys/templates/character-sheet.html",
             width: 620,
             height: 800,
-            tabs: [{ navSelector: ".sheet-tabs",contentSelector: ".sheet-body", initial: "description"  }]
+            tabs: [{ navSelector: ".sheet-tabs",contentSelector: ".sheet-body", initial: "description"  }],
         });
     }
-
-    /* -------------------------------------------- */
-
-    /** @override */
-    getData() {
-        const data = super.getData();
-        data.dtypes = ["String", "Number", "Boolean"];
-
-        // Prepare items.
-        if (this.actor.data.type == 'character') {
-            this._prepareCharacterItems(data);
-        }
-
-        return data;
-    }
-
-    _prepareCharacterItems(sheetData) {
-        const actorData = sheetData.actor;
-
-        // Initialize containers.
-        const armor = [];
-        const weapon = [];
-        const gear = [];
-        const talent = [];
-        const injury = [];
     
+/** @override */
+getData() {
+    const data = super.getData();
+    data.dtypes = ["String", "Number", "Boolean"];
 
-    // Iterate through items, allocating to containers
-    // let totalWeight = 0;
-	// fow now weapons and armor also gets put into gear will be splitt later
-    for (let i of sheetData.items) {
-        let item = i.data;
-        i.img = i.img || DEFAULT_TOKEN;
-        if (i.type === 'armor') {
-            gear.push(i);
-        } else if (i.type === 'weapon') {
-            gear.push(i);
-        } else if (i.type === 'gear') {
-            gear.push(i);
-        } else if (i.type === 'talent') {
-            talent.push(i);
-        } else if (i.type === 'injury') {
-            injury.push(i);
-        }
+    // Prepare items.
+    if (this.actor.data.type == 'character') {
+        this._prepareCharacterItems(data);
     }
-
-    // Assign and return
-    actorData.armor = gear;
-    actorData.weapon = weapon;
-    actorData.gear = gear;
-	actorData.talent = talent;
-	actorData.injury = injury;
+    
+    return data;
 }
+
+_prepareCharacterItems(sheetData) {
+    const actorData = sheetData.actor;
+
+    // Initialize containers.
+    const armor = [];
+    const weapon = [];
+    const gear = [];
+    const talent = [];
+    const injury = [];
+
+
+// Iterate through items, allocating to containers
+// let totalWeight = 0;
+// fow now weapons and armor also gets put into gear will be splitt later
+for (let i of sheetData.items) {
+    let item = i.data;
+    i.img = i.img || DEFAULT_TOKEN;
+    if (i.type === 'armor') {
+        gear.push(i);
+    } else if (i.type === 'weapon') {
+        gear.push(i);
+    } else if (i.type === 'gear') {
+        gear.push(i);
+    } else if (i.type === 'talent') {
+        talent.push(i);
+    } else if (i.type === 'injury') {
+        injury.push(i);
+    }
+}
+
+// Assign and return
+actorData.armor = gear;
+actorData.weapon = weapon;
+actorData.gear = gear;
+actorData.talent = talent;
+actorData.injury = injury;
+}
+
 
 /* -------------------------------------------- */
 
@@ -93,6 +97,118 @@ activateListeners(html) {
     });
 
     html.find(".talents").on("click", ".talent-control", this._onClickTalentControl.bind(this));
+
+    //skill rolls
+    html.find('.rollable').click(ev =>{
+        event.preventDefault();
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+        const charlabel = dataset.label2;
+        const data = this.getData();
+        var char =0;
+        if(charlabel=="brawn"){
+            char= data.data.characteristics.brawn.value;
+        }    
+        else if(charlabel=="agility"){
+            char= data.data.characteristics.agility.value;
+        }        
+        else if(charlabel=="intellect"){
+            char= data.data.characteristics.intellect.value;
+        }           
+        else if(charlabel=="cunning"){
+            char= data.data.characteristics.cunning.value;
+        }      
+        else if(charlabel=="willpower"){
+           char= data.data.characteristics.willpower.value; 
+        }     
+        else if(charlabel=="presence"){
+            char= data.data.characteristics.presence.value;
+        } 
+
+           var array= genesysUtil.abilityToArray(char,dataset.label1)
+
+
+            let f=new dicePopout(array, {
+                classes: ["genesys", "sheet", "actor"],
+                template: "systems/genesys/templates/dicePopout.html",
+                width: 300,
+                height: 500,
+                title: "Dice Roller",
+                popOut: true
+            });
+            f.render(true,{
+                left: 100,
+                right: 100
+    
+            });
+
+
+
+
+
+          
+    });
+
+    html.find('.all-dice').click(ev => {
+   
+        
+
+
+        let f=new dicePopout([0,0,0,0,0,0], {
+            classes: ["genesys", "sheet", "actor"],
+            template: "systems/genesys/templates/dicePopout.html",
+            width: 300,
+            height: 500,
+            title: "Dice Roller",
+            popOut: true
+        });
+        f.render(true,{
+            left: 100,
+            right: 100
+
+        });
+        
+    });
+    //initiative
+    html.find('.int-dice').click(ev =>{
+        const data=this.getData();
+        const charPres=data.data.characteristics.presence.value;
+        const charWill=data.data.characteristics.willpower.value;
+        const skillCool=data.data.skills.cool.value;
+        const skillVig=data.data.skills.vigilance.value;
+
+        let d = new Dialog({
+            title: "INITIATIVE",
+            content: "<p>COOL OR VIGILANCE</p>",
+            buttons: {
+             one: {
+              label: "COOL",
+              callback: () => ChatMessage.create({
+                user: game.user._id,
+                speaker: this.getData(),
+                flavor: 'rolls Initiative(cool)',
+                content: genesysUtil.genesysInitiative(genesysUtil.abilityToArray(charPres,skillCool))
+              })
+             },
+             two: {
+              label: "VIGILANCE",
+              callback: () => ChatMessage.create({
+                user: game.user._id,
+                speaker: this.getData(),
+                flavor: 'rolls Initiative(vigilance)',
+                content: genesysUtil.genesysInitiative(genesysUtil.abilityToArray(charWill,skillVig))
+              })
+             }
+            },
+            default: "two",
+           });
+           d.render(true);
+
+
+
+    });
+
+
 }
 
 /* -------------------------------------------- */
@@ -131,7 +247,7 @@ async _onClickTalentControl(event) {
 }
 /** @override */
 _updateObject(event, formData) {
-
+/*
     // Handle the free-form talents list
     const formAttrs = expandObject(formData).data.talents || {};
     const talents = Object.values(formAttrs).reduce((obj, v) => {
@@ -158,7 +274,7 @@ _updateObject(event, formData) {
             "data.talents": talents
         });
 
-    // Update the Actor
+    // Update the Actor*/
     return this.object.update(formData);
 }
 
