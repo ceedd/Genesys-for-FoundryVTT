@@ -10,5 +10,7 @@ Initiative has to be manually added to the combattracker.
 
 Check  the branches for the newest release.
 
+Development will be slow, because of RL stuff.
+
 Paste this link when foundry requests a manifest:
 https://raw.githubusercontent.com/ceedd/Genesys-for-FoundryVTT/release-v0.2/system.json
